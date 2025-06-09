@@ -1,0 +1,90 @@
+
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { BarChart3, Leaf, Shield, TrendingUp } from 'lucide-react';
+
+const OurWork = () => {
+  const services = [
+    {
+      icon: BarChart3,
+      title: 'Carbon Footprint Analysis',
+      description: 'Comprehensive tracking and analysis of your carbon emissions across all business operations and personal activities.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Sustainability Reporting',
+      description: 'Automated generation of detailed sustainability reports that meet international standards and regulatory requirements.'
+    },
+    {
+      icon: Leaf,
+      title: 'Eco-Impact Optimization',
+      description: 'AI-powered recommendations to reduce your environmental impact while maintaining operational efficiency.'
+    },
+    {
+      icon: Shield,
+      title: 'Compliance Monitoring',
+      description: 'Stay ahead of environmental regulations with real-time compliance tracking and automated alerts.'
+    }
+  ];
+
+  return (
+    <section id="work" className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            Our Work & Services
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            We provide comprehensive environmental tracking solutions that help you understand, measure, and reduce your carbon footprint through cutting-edge technology.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {services.map((service, index) => (
+            <Card key={index} className="text-center hover:shadow-lg transition-all hover:-translate-y-1">
+              <CardContent className="p-6">
+                <div className="flex justify-center mb-4">
+                  <service.icon className="h-12 w-12 text-green-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {service.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="bg-white rounded-lg p-8 shadow-lg">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=300&fit=crop"
+                alt="Environmental data visualization"
+                className="rounded-lg shadow-lg w-full"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Data-Driven Environmental Solutions
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Our platform leverages advanced analytics and machine learning to provide actionable insights into your environmental impact. From real-time monitoring to predictive modeling, we help you make informed decisions.
+              </p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Real-time emissions tracking</li>
+                <li>• Predictive impact modeling</li>
+                <li>• Automated compliance reporting</li>
+                <li>• Custom dashboard creation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default OurWork;
