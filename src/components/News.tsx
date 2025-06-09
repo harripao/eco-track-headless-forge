@@ -3,39 +3,42 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const News = () => {
+  const { t } = useLanguage();
+
   const newsItems = [
     {
-      title: 'EcoTrack Pro Reaches 1 Million Tons of CO2 Tracked',
-      excerpt: 'A major milestone in our mission to make environmental impact visible and actionable for everyone.',
+      titleKey: 'news.item1.title',
+      excerptKey: 'news.item1.excerpt',
       author: 'Sarah Johnson',
       date: '2024-06-05',
-      category: 'Milestone',
+      categoryKey: 'news.categories.milestone',
       image: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=200&fit=crop'
     },
     {
-      title: 'New AI-Powered Emission Prediction Features',
-      excerpt: 'Advanced machine learning algorithms now help predict future emissions based on current patterns and planned activities.',
+      titleKey: 'news.item2.title',
+      excerptKey: 'news.item2.excerpt',
       author: 'Dr. Michael Chen',
       date: '2024-05-28',
-      category: 'Product Update',
+      categoryKey: 'news.categories.productUpdate',
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=200&fit=crop'
     },
     {
-      title: 'Partnership with Global Climate Initiative',
-      excerpt: 'EcoTrack Pro joins forces with leading environmental organizations to accelerate climate action worldwide.',
+      titleKey: 'news.item3.title',
+      excerptKey: 'news.item3.excerpt',
       author: 'Emma Rodriguez',
       date: '2024-05-15',
-      category: 'Partnership',
+      categoryKey: 'news.categories.partnership',
       image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=200&fit=crop'
     },
     {
-      title: 'Sustainable Business E-book Now Available',
-      excerpt: 'Our comprehensive guide to implementing sustainable practices in modern business operations is now ready for download.',
+      titleKey: 'news.item4.title',
+      excerptKey: 'news.item4.excerpt',
       author: 'David Thompson',
       date: '2024-05-01',
-      category: 'Resource',
+      categoryKey: 'news.categories.resource',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=200&fit=crop'
     }
   ];
@@ -45,10 +48,10 @@ const News = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Latest News & Updates
+            {t('news.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stay informed about our latest developments, partnerships, and insights in environmental sustainability and carbon tracking technology.
+            {t('news.subtitle')}
           </p>
         </div>
 
@@ -58,16 +61,16 @@ const News = () => {
               <div className="relative">
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={t(item.titleKey)}
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute top-4 left-4">
-                  <Badge>{item.category}</Badge>
+                  <Badge>{t(item.categoryKey)}</Badge>
                 </div>
               </div>
               <CardHeader>
                 <CardTitle className="text-xl hover:text-green-600 transition-colors">
-                  {item.title}
+                  {t(item.titleKey)}
                 </CardTitle>
                 <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                   <div className="flex items-center">
@@ -82,7 +85,7 @@ const News = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  {item.excerpt}
+                  {t(item.excerptKey)}
                 </p>
               </CardContent>
             </Card>
@@ -91,10 +94,10 @@ const News = () => {
 
         <div className="text-center mt-12">
           <div className="inline-flex space-x-4">
-            <Badge variant="outline" className="px-4 py-2">All News</Badge>
-            <Badge variant="outline" className="px-4 py-2">Product Updates</Badge>
-            <Badge variant="outline" className="px-4 py-2">Partnerships</Badge>
-            <Badge variant="outline" className="px-4 py-2">Resources</Badge>
+            <Badge variant="outline" className="px-4 py-2">{t('news.filters.all')}</Badge>
+            <Badge variant="outline" className="px-4 py-2">{t('news.filters.productUpdates')}</Badge>
+            <Badge variant="outline" className="px-4 py-2">{t('news.filters.partnerships')}</Badge>
+            <Badge variant="outline" className="px-4 py-2">{t('news.filters.resources')}</Badge>
           </div>
         </div>
       </div>
