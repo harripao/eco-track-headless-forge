@@ -2,42 +2,45 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="pt-20 pb-16 bg-gradient-to-br from-green-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-              Track Your Environmental Impact with
-              <span className="text-green-600"> EcoTrack Pro</span>
+              {t('hero.title')}
+              <span className="text-green-600"> Sentani</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Professional carbon footprint tracking and sustainability management for businesses and individuals committed to making a positive environmental impact.
+              {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-green-600 hover:bg-green-700">
-                Get Started Free
+                {t('hero.getStarted')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline">
                 <Play className="mr-2 h-5 w-5" />
-                Watch Demo
+                {t('hero.watchDemo')}
               </Button>
             </div>
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">10K+</div>
-                <div className="text-sm text-muted-foreground">Active Users</div>
+                <div className="text-sm text-muted-foreground">{t('hero.activeUsers')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">500+</div>
-                <div className="text-sm text-muted-foreground">Companies</div>
+                <div className="text-sm text-muted-foreground">{t('hero.companies')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">1M+</div>
-                <div className="text-sm text-muted-foreground">Tons CO2 Tracked</div>
+                <div className="text-sm text-muted-foreground">{t('hero.co2Tracked')}</div>
               </div>
             </div>
           </div>

@@ -4,8 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Projects = () => {
+  const { t } = useLanguage();
+
   const projects = [
     {
       title: 'Global Corporate Carbon Tracking',
@@ -46,10 +49,10 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Our Projects & Impact
+            {t('projects.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore our successful projects and initiatives that are making a real difference in environmental sustainability across industries and communities.
+            {t('projects.subtitle')}
           </p>
         </div>
 
@@ -80,7 +83,7 @@ const Projects = () => {
                   {project.description}
                 </p>
                 <Button variant="outline" size="sm">
-                  Learn More
+                  {t('projects.learnMore')}
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
@@ -90,7 +93,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <Button size="lg" className="bg-green-600 hover:bg-green-700">
-            View All Projects
+            {t('projects.viewAll')}
           </Button>
         </div>
       </div>

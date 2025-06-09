@@ -2,23 +2,26 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Target, Users, Award } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const AboutUs = () => {
+  const { t } = useLanguage();
+
   const values = [
     {
       icon: Target,
-      title: 'Our Mission',
-      description: 'To make environmental tracking accessible and actionable for everyone, driving meaningful change towards a sustainable future.'
+      title: t('about.mission.title'),
+      description: t('about.mission.description')
     },
     {
       icon: Users,
-      title: 'Our Team',
-      description: 'A diverse group of environmental scientists, data analysts, and sustainability experts dedicated to creating impactful solutions.'
+      title: t('about.team.title'),
+      description: t('about.team.description')
     },
     {
       icon: Award,
-      title: 'Our Impact',
-      description: 'Recognized by leading environmental organizations for our innovative approach to carbon footprint tracking and reduction.'
+      title: t('about.impact.title'),
+      description: t('about.impact.description')
     }
   ];
 
@@ -27,10 +30,10 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            About EcoTrack Pro
+            {t('about.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're passionate about empowering individuals and organizations to understand, track, and reduce their environmental impact through innovative technology and data-driven insights.
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -56,13 +59,13 @@ const AboutUs = () => {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Founded on Sustainability
+                {t('about.founded.title')}
               </h3>
               <p className="text-muted-foreground mb-4">
-                EcoTrack Pro was born from the urgent need to make environmental data accessible and actionable. Our platform helps organizations and individuals make informed decisions that positively impact our planet.
+                {t('about.founded.description1')}
               </p>
               <p className="text-muted-foreground">
-                Since our launch, we've helped track and reduce millions of tons of CO2 emissions, making a real difference in the fight against climate change.
+                {t('about.founded.description2')}
               </p>
             </div>
             <div>

@@ -2,28 +2,31 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { BarChart3, Leaf, Shield, TrendingUp } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const OurWork = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: BarChart3,
-      title: 'Carbon Footprint Analysis',
-      description: 'Comprehensive tracking and analysis of your carbon emissions across all business operations and personal activities.'
+      title: t('work.carbonAnalysis.title'),
+      description: t('work.carbonAnalysis.description')
     },
     {
       icon: TrendingUp,
-      title: 'Sustainability Reporting',
-      description: 'Automated generation of detailed sustainability reports that meet international standards and regulatory requirements.'
+      title: t('work.reporting.title'),
+      description: t('work.reporting.description')
     },
     {
       icon: Leaf,
-      title: 'Eco-Impact Optimization',
-      description: 'AI-powered recommendations to reduce your environmental impact while maintaining operational efficiency.'
+      title: t('work.optimization.title'),
+      description: t('work.optimization.description')
     },
     {
       icon: Shield,
-      title: 'Compliance Monitoring',
-      description: 'Stay ahead of environmental regulations with real-time compliance tracking and automated alerts.'
+      title: t('work.compliance.title'),
+      description: t('work.compliance.description')
     }
   ];
 
@@ -32,10 +35,10 @@ const OurWork = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Our Work & Services
+            {t('work.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We provide comprehensive environmental tracking solutions that help you understand, measure, and reduce your carbon footprint through cutting-edge technology.
+            {t('work.subtitle')}
           </p>
         </div>
 
@@ -68,10 +71,10 @@ const OurWork = () => {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Data-Driven Environmental Solutions
+                {t('work.dataTitle')}
               </h3>
               <p className="text-muted-foreground mb-4">
-                Our platform leverages advanced analytics and machine learning to provide actionable insights into your environmental impact. From real-time monitoring to predictive modeling, we help you make informed decisions.
+                {t('work.dataDescription')}
               </p>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Real-time emissions tracking</li>

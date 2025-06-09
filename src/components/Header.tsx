@@ -1,18 +1,21 @@
 
 import React, { useState } from 'react';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navItems = [
-    { label: 'About Us', href: '#about' },
-    { label: 'Our Work', href: '#work' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'News', href: '#news' },
-    { label: 'Resources', href: '#resources' },
-    { label: 'Contact', href: '#contact' }
+    { label: t('nav.about'), href: '#about' },
+    { label: t('nav.work'), href: '#work' },
+    { label: t('nav.projects'), href: '#projects' },
+    { label: t('nav.news'), href: '#news' },
+    { label: t('nav.resources'), href: '#resources' },
+    { label: t('nav.contact'), href: '#contact' }
   ];
 
   return (
@@ -20,8 +23,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Leaf className="h-8 w-8 text-green-600" />
-            <span className="text-xl font-bold text-foreground">EcoTrack Pro</span>
+            <img 
+              src="/lovable-uploads/e429ddc2-9145-4e69-b185-e3d9b1d61927.png" 
+              alt="Sentani Logo" 
+              className="h-8 w-auto"
+            />
+            <span className="text-xl font-bold text-foreground">Sentani</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
@@ -34,8 +41,9 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
+            <LanguageToggle />
             <Button className="bg-green-600 hover:bg-green-700">
-              Donate
+              {t('nav.donate')}
             </Button>
           </nav>
 
@@ -60,9 +68,12 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button className="bg-green-600 hover:bg-green-700 mt-3">
-                Donate
-              </Button>
+              <div className="flex justify-between items-center mt-3">
+                <LanguageToggle />
+                <Button className="bg-green-600 hover:bg-green-700">
+                  {t('nav.donate')}
+                </Button>
+              </div>
             </nav>
           </div>
         )}

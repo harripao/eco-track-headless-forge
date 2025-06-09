@@ -1,15 +1,18 @@
 
 import React from 'react';
-import { Leaf, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   const footerLinks = {
     company: [
-      { label: 'About Us', href: '#about' },
-      { label: 'Our Work', href: '#work' },
-      { label: 'Projects', href: '#projects' },
-      { label: 'News', href: '#news' }
+      { label: t('nav.about'), href: '#about' },
+      { label: t('nav.work'), href: '#work' },
+      { label: t('nav.projects'), href: '#projects' },
+      { label: t('nav.news'), href: '#news' }
     ],
     resources: [
       { label: 'E-books', href: '#resources' },
@@ -18,10 +21,10 @@ const Footer = () => {
       { label: 'Blog', href: '#news' }
     ],
     support: [
-      { label: 'Contact Us', href: '#contact' },
-      { label: 'Help Center', href: '#' },
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' }
+      { label: t('nav.contact'), href: '#contact' },
+      { label: t('footer.helpCenter'), href: '#' },
+      { label: t('footer.privacy'), href: '#' },
+      { label: t('footer.terms'), href: '#' }
     ]
   };
 
@@ -32,11 +35,15 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <Leaf className="h-8 w-8 text-green-400" />
-              <span className="text-xl font-bold">EcoTrack Pro</span>
+              <img 
+                src="/lovable-uploads/e429ddc2-9145-4e69-b185-e3d9b1d61927.png" 
+                alt="Sentani Logo" 
+                className="h-8 w-auto brightness-0 invert"
+              />
+              <span className="text-xl font-bold">Sentani</span>
             </div>
             <p className="text-gray-300 mb-6">
-              Empowering businesses and individuals to track, understand, and reduce their environmental impact through innovative technology.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
@@ -56,7 +63,7 @@ const Footer = () => {
 
           {/* Links Sections */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('footer.company')}</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
@@ -72,7 +79,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Resources</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('footer.resources')}</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
@@ -88,7 +95,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Support</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('footer.support')}</h3>
             <ul className="space-y-2">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
@@ -109,15 +116,15 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-green-400" />
-              <span className="text-gray-300">hello@ecotrackpro.com</span>
+              <span className="text-gray-300">{t('footer.email')}</span>
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-green-400" />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
+              <span className="text-gray-300">{t('footer.phone')}</span>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-green-400" />
-              <span className="text-gray-300">Sustainability City, SC</span>
+              <span className="text-gray-300">{t('footer.location')}</span>
             </div>
           </div>
         </div>
@@ -125,11 +132,11 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            © 2024 EcoTrack Pro. All rights reserved.
+            {t('footer.copyright')}
           </p>
           <div className="mt-4 md:mt-0">
             <Button className="bg-green-600 hover:bg-green-700">
-              Donate to Support Our Mission
+              {t('footer.donateMission')}
             </Button>
           </div>
         </div>
