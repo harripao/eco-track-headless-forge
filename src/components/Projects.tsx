@@ -12,49 +12,64 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Global Manufacturing CO2 Reduction",
-      description: "Helped a multinational manufacturing company reduce their carbon footprint by 35% through comprehensive tracking and optimization strategies.",
+      title: t('projects.project1.title'),
+      description: t('projects.project1.description'),
       image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop&auto=format",
-      category: "Manufacturing",
-      impact: "35% CO2 Reduction",
-      status: "Completed",
+      category: t('projects.project1.category'),
+      impact: t('projects.project1.impact'),
+      status: t('projects.project1.status'),
       details: {
-        challenge: "A large manufacturing company was struggling to track and reduce their carbon emissions across multiple facilities worldwide.",
-        solution: "We implemented our comprehensive carbon tracking platform with real-time monitoring, automated reporting, and AI-powered optimization recommendations.",
-        results: ["35% reduction in CO2 emissions", "50% improvement in energy efficiency", "$2.3M annual cost savings", "ISO 14001 certification achieved"],
-        timeline: "18 months",
+        challenge: t('projects.project1.details.challenge'),
+        solution: t('projects.project1.details.solution'),
+        results: [
+          t('projects.project1.details.results.0'),
+          t('projects.project1.details.results.1'),
+          t('projects.project1.details.results.2'),
+          t('projects.project1.details.results.3')
+        ],
+        timeline: t('projects.project1.details.timeline'),
         technologies: ["IoT Sensors", "AI Analytics", "Cloud Platform", "Mobile Apps"]
       }
     },
     {
       id: 2,
-      title: "Smart City Sustainability Initiative",
-      description: "Partnered with Jakarta to implement city-wide environmental monitoring and citizen engagement platform for sustainable urban development.",
+      title: t('projects.project2.title'),
+      description: t('projects.project2.description'),
       image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?w=600&h=400&fit=crop&auto=format",
-      category: "Smart Cities",
-      impact: "City-wide Impact",
-      status: "Ongoing",
+      category: t('projects.project2.category'),
+      impact: t('projects.project2.impact'),
+      status: t('projects.project2.status'),
       details: {
-        challenge: "Jakarta needed a comprehensive system to monitor environmental impact and engage citizens in sustainability efforts.",
-        solution: "Developed a city-wide platform with public dashboards, citizen reporting tools, and real-time environmental monitoring.",
-        results: ["40% increase in citizen engagement", "25% reduction in waste generation", "Real-time air quality monitoring", "15 new green spaces created"],
-        timeline: "24 months",
+        challenge: t('projects.project2.details.challenge'),
+        solution: t('projects.project2.details.solution'),
+        results: [
+          t('projects.project2.details.results.0'),
+          t('projects.project2.details.results.1'),
+          t('projects.project2.details.results.2'),
+          t('projects.project2.details.results.3')
+        ],
+        timeline: t('projects.project2.details.timeline'),
         technologies: ["IoT Network", "Public APIs", "Mobile Platform", "Data Visualization"]
       }
     },
     {
       id: 3,
-      title: "Retail Chain Sustainability Program",
-      description: "Enabled a major retail chain to track and reduce environmental impact across 500+ stores, achieving carbon neutrality goals ahead of schedule.",
+      title: t('projects.project3.title'),
+      description: t('projects.project3.description'),
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&auto=format",
-      category: "Retail",
-      impact: "Carbon Neutral",
-      status: "Completed",
+      category: t('projects.project3.category'),
+      impact: t('projects.project3.impact'),
+      status: t('projects.project3.status'),
       details: {
-        challenge: "A retail chain with 500+ stores needed to achieve carbon neutrality while maintaining operational efficiency.",
-        solution: "Implemented store-level tracking, supply chain monitoring, and customer engagement tools for sustainable shopping.",
-        results: ["Carbon neutral certification", "30% reduction in packaging waste", "20% energy savings per store", "Enhanced brand reputation"],
-        timeline: "12 months",
+        challenge: t('projects.project3.details.challenge'),
+        solution: t('projects.project3.details.solution'),
+        results: [
+          t('projects.project3.details.results.0'),
+          t('projects.project3.details.results.1'),
+          t('projects.project3.details.results.2'),
+          t('projects.project3.details.results.3')
+        ],
+        timeline: t('projects.project3.details.timeline'),
         technologies: ["POS Integration", "Supply Chain APIs", "Energy Monitoring", "Customer App"]
       }
     }
