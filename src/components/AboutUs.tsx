@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Target, Users, Award, Lightbulb } from 'lucide-react';
@@ -81,7 +80,7 @@ const AboutUs = () => {
 
         <div className="text-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Our Approach
+            Our Values
           </h2>
         </div>
 
