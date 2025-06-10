@@ -14,23 +14,23 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-              {t('hero.title')}
-              <span className="text-green-600"> Sentani</span>
+              Building harmony between people, forests and
+              <span className="text-green-600"> climate</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              {t('hero.subtitle')}
+              Empowering communities, preserving biodiversity, and promoting sustainable solutions throughout Indonesia
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-green-600 hover:bg-green-700" asChild>
-                <Link to="/tracking">
-                  {t('hero.getStarted')}
+                <Link to="/donate">
+                  Donate Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link to="/demo">
+                <Link to="/projects">
                   <Play className="mr-2 h-5 w-5" />
-                  {t('hero.watchDemo')}
+                  Explore Our Work
                 </Link>
               </Button>
             </div>
