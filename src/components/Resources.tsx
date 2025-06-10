@@ -66,7 +66,12 @@ const Resources = () => {
   ];
 
   const handleResourceClick = (resource) => {
-    setSelectedEbook(resource);
+    if (resource.price === t('resources.pricing.free')) {
+      setInquirySubject(t(resource.titleKey));
+      setShowInquiry(true);
+    } else {
+      setSelectedEbook(resource);
+    }
   };
 
   const handleFreeResourceClick = (resourceKey) => {
@@ -175,13 +180,20 @@ const Resources = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {freeResourcesKeys.map((resourceKey, index) => (
-              <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg">
+              <div 
+                key={index} 
+                className="flex items-center space-x-3 bg-white p-4 rounded-lg cursor-pointer hover:shadow-md transition-shadow"
+                onClick={() => handleFreeResourceClick(resourceKey)}
+              >
                 <FileText className="h-5 w-5 text-green-600" />
                 <span className="text-muted-foreground flex-1">{t(resourceKey)}</span>
                 <Button 
                   size="sm" 
                   variant="ghost"
-                  onClick={() => handleFreeResourceClick(resourceKey)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleFreeResourceClick(resourceKey);
+                  }}
                 >
                   <ExternalLink className="h-4 w-4" />
                 </Button>
