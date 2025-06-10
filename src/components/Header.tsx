@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import LanguageToggle from './LanguageToggle';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const location = useLocation();
 
   const navItems = [
     { label: t('nav.about'), href: '#about' },
@@ -18,6 +19,20 @@ const Header = () => {
     { label: t('nav.resources'), href: '#resources' },
     { label: t('nav.contact'), href: '#contact' }
   ];
+
+  const handleNavClick = (href: string) => {
+    // If we're not on the home page, navigate to home page with the section
+    if (location.pathname !== '/') {
+      window.location.href = '/' + href;
+    } else {
+      // If we're on home page, just scroll to the section
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -34,13 +49,13 @@ const Header = () => {
           
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                onClick={() => handleNavClick(item.href)}
+                className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
             <LanguageToggle />
             <Button className="bg-green-600 hover:bg-green-700">
@@ -60,14 +75,13 @@ const Header = () => {
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col space-y-3 pt-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-muted-foreground hover:text-foreground transition-colors text-left"
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
               <div className="flex justify-between items-center mt-3">
                 <LanguageToggle />
