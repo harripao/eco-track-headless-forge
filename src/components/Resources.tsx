@@ -128,7 +128,11 @@ const Resources = () => {
         {/* All Resources Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {resources.map((resource, index) => (
-            <Card key={index} className={`hover:shadow-lg transition-shadow cursor-pointer ${resource.featured ? 'ring-2 ring-green-600' : ''}`}>
+            <Card 
+              key={index} 
+              className={`hover:shadow-lg transition-shadow cursor-pointer ${resource.featured ? 'ring-2 ring-green-600' : ''}`}
+              onClick={() => handleResourceClick(resource)}
+            >
               <div className="relative">
                 <img
                   src={resource.image}
@@ -157,7 +161,6 @@ const Resources = () => {
                   <Button 
                     size="sm" 
                     variant={resource.price === t('resources.pricing.free') ? 'outline' : 'default'}
-                    onClick={() => handleResourceClick(resource)}
                   >
                     {resource.price === t('resources.pricing.free') ? <Download className="h-4 w-4" /> : t('resources.buttons.buyNow')}
                   </Button>

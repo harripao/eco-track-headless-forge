@@ -3,6 +3,9 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Target, Users, Award } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Play } from 'lucide-react';
 
 const AboutUs = () => {
   const { t } = useLanguage();
@@ -64,9 +67,23 @@ const AboutUs = () => {
               <p className="text-muted-foreground mb-4">
                 {t('about.founded.description1')}
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-6">
                 {t('about.founded.description2')}
               </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="md" className="bg-green-600 hover:bg-green-700" asChild>
+                  <Link to="/tracking">
+                    {t('hero.getStarted')}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button size="md" variant="outline" asChild>
+                  <Link to="/demo">
+                    <Play className="mr-2 h-5 w-5" />
+                    {t('hero.watchDemo')}
+                  </Link>
+                </Button>
+              </div>
             </div>
             <div>
               <img

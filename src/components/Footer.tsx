@@ -8,7 +8,7 @@ const Footer = () => {
   const { t } = useLanguage();
 
   const footerLinks = {
-    company: [
+    organization: [
       { label: t('nav.about'), href: '#about' },
       { label: t('nav.work'), href: '#work' },
       { label: t('nav.projects'), href: '#projects' },
@@ -34,38 +34,40 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <img 
-                src="/lovable-uploads/e429ddc2-9145-4e69-b185-e3d9b1d61927.png" 
-                alt="Sentani Logo" 
-                className="h-8 w-auto brightness-0 invert"
-              />
-              <span className="text-xl font-bold">Sentani</span>
-            </div>
-            <p className="text-gray-300 mb-6">
-              {t('footer.description')}
-            </p>
-            <div className="flex space-x-4">
-              <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
-                <Facebook className="h-5 w-5" />
-              </Button>
-              <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
-                <Twitter className="h-5 w-5" />
-              </Button>
-              <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
-                <Instagram className="h-5 w-5" />
-              </Button>
+            <div className="flex flex-col items-center lg:items-start">
+              <div className="mb-4 flex justify-center">
+                <img 
+                  src="/lovable-uploads/e429ddc2-9145-4e69-b185-e3d9b1d61927.png" 
+                  alt="Sentani Logo" 
+                  className="h-16 w-auto brightness-0 invert"
+                />
+              </div>
+              <span className="text-xl font-bold mb-4">Sentani</span>
+              <p className="text-gray-300 mb-6 text-center lg:text-left">
+                {t('footer.description')}
+              </p>
+              <div className="flex space-x-4">
+                <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
+                  <Facebook className="h-5 w-5" />
+                </Button>
+                <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
+                  <Twitter className="h-5 w-5" />
+                </Button>
+                <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
+                  <Linkedin className="h-5 w-5" />
+                </Button>
+                <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
+                  <Instagram className="h-5 w-5" />
+                </Button>
+              </div>
             </div>
           </div>
 
           {/* Links Sections */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">{t('footer.company')}</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('footer.organization')}</h3>
             <ul className="space-y-2">
-              {footerLinks.company.map((link, index) => (
+              {footerLinks.organization.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}

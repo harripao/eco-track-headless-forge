@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -20,13 +21,17 @@ const Hero = () => {
               {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
-                {t('hero.getStarted')}
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="bg-green-600 hover:bg-green-700" asChild>
+                <Link to="/tracking">
+                  {t('hero.getStarted')}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
-              <Button size="lg" variant="outline">
-                <Play className="mr-2 h-5 w-5" />
-                {t('hero.watchDemo')}
+              <Button size="lg" variant="outline" asChild>
+                <Link to="/demo">
+                  <Play className="mr-2 h-5 w-5" />
+                  {t('hero.watchDemo')}
+                </Link>
               </Button>
             </div>
             <div className="grid grid-cols-3 gap-6 pt-8">

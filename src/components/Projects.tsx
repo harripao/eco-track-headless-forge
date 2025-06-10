@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import ProjectModal from './ProjectModal';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -102,8 +103,8 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" className="bg-green-600 hover:bg-green-700">
-            {t('projects.viewAll')}
+          <Button size="lg" className="bg-green-600 hover:bg-green-700" asChild>
+            <Link to="/projects">{t('projects.viewAll')}</Link>
           </Button>
         </div>
       </div>

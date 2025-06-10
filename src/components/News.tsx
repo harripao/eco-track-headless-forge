@@ -4,12 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import InquiryModal from './InquiryModal';
 
 const News = () => {
   const { t } = useLanguage();
-  const [showInquiry, setShowInquiry] = useState(false);
-  const [inquirySubject, setInquirySubject] = useState('');
+  const [activeFilter, setActiveFilter] = useState('all');
 
   const newsItems = [
     {
@@ -46,9 +44,15 @@ const News = () => {
     }
   ];
 
-  const handleNewsClick = (item) => {
-    setInquirySubject(t(item.titleKey));
-    setShowInquiry(true);
+  const filteredNews = activeFilter === 'all' 
+    ? newsItems 
+    : newsItems.filter(item => {
+        const category = item.categoryKey.split('.').pop();
+        return category === activeFilter;
+      });
+
+  const handleFilterClick = (filter) => {
+    setActiveFilter(filter);
   };
 
   return (
@@ -64,11 +68,10 @@ const News = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {newsItems.map((item, index) => (
+          {filteredNews.map((item, index) => (
             <Card 
               key={index} 
               className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-              onClick={() => handleNewsClick(item)}
             >
               <div className="relative">
                 <img
@@ -106,20 +109,37 @@ const News = () => {
 
         <div className="text-center mt-12">
           <div className="inline-flex space-x-4">
-            <Badge variant="outline" className="px-4 py-2">{t('news.filters.all')}</Badge>
-            <Badge variant="outline" className="px-4 py-2">{t('news.filters.productUpdates')}</Badge>
-            <Badge variant="outline" className="px-4 py-2">{t('news.filters.partnerships')}</Badge>
-            <Badge variant="outline" className="px-4 py-2">{t('news.filters.resources')}</Badge>
+            <Badge 
+              variant={activeFilter === 'all' ? 'default' : 'outline'} 
+              className="px-4 py-2 cursor-pointer" 
+              onClick={() => handleFilterClick('all')}
+            >
+              {t('news.filters.all')}
+            </Badge>
+            <Badge 
+              variant={activeFilter === 'productUpdate' ? 'default' : 'outline'} 
+              className="px-4 py-2 cursor-pointer" 
+              onClick={() => handleFilterClick('productUpdate')}
+            >
+              {t('news.filters.productUpdates')}
+            </Badge>
+            <Badge 
+              variant={activeFilter === 'partnership' ? 'default' : 'outline'} 
+              className="px-4 py-2 cursor-pointer" 
+              onClick={() => handleFilterClick('partnership')}
+            >
+              {t('news.filters.partnerships')}
+            </Badge>
+            <Badge 
+              variant={activeFilter === 'resource' ? 'default' : 'outline'} 
+              className="px-4 py-2 cursor-pointer" 
+              onClick={() => handleFilterClick('resource')}
+            >
+              {t('news.filters.resources')}
+            </Badge>
           </div>
         </div>
       </div>
-
-      {/* Inquiry Modal */}
-      <InquiryModal
-        isOpen={showInquiry}
-        onClose={() => setShowInquiry(false)}
-        subject={inquirySubject}
-      />
     </section>
   );
 };
