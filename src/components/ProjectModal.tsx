@@ -16,11 +16,16 @@ interface ProjectModalProps {
     category: string;
     impact: string;
     status: string;
-  };
+  } | null;
 }
 
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
   const { t } = useLanguage();
+
+  // Return null if project is not provided
+  if (!project) {
+    return null;
+  }
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

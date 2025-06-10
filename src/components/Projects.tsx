@@ -17,6 +17,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop&auto=format",
       category: "Manufacturing",
       impact: "35% CO2 Reduction",
+      status: "Completed",
       details: {
         challenge: "A large manufacturing company was struggling to track and reduce their carbon emissions across multiple facilities worldwide.",
         solution: "We implemented our comprehensive carbon tracking platform with real-time monitoring, automated reporting, and AI-powered optimization recommendations.",
@@ -32,6 +33,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?w=600&h=400&fit=crop&auto=format",
       category: "Smart Cities",
       impact: "City-wide Impact",
+      status: "Ongoing",
       details: {
         challenge: "Jakarta needed a comprehensive system to monitor environmental impact and engage citizens in sustainability efforts.",
         solution: "Developed a city-wide platform with public dashboards, citizen reporting tools, and real-time environmental monitoring.",
@@ -47,6 +49,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&auto=format",
       category: "Retail",
       impact: "Carbon Neutral",
+      status: "Completed",
       details: {
         challenge: "A retail chain with 500+ stores needed to achieve carbon neutrality while maintaining operational efficiency.",
         solution: "Implemented store-level tracking, supply chain monitoring, and customer engagement tools for sustainable shopping.",
@@ -115,6 +118,7 @@ const Projects = () => {
       </div>
 
       <ProjectModal 
+        isOpen={!!selectedProject}
         project={selectedProject} 
         onClose={() => setSelectedProject(null)} 
       />
