@@ -1,16 +1,13 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Target, Users, Award } from 'lucide-react';
+import { Target, Users, Award, Lightbulb } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Play } from 'lucide-react';
 
 const AboutUs = () => {
   const { t } = useLanguage();
 
-  const values = [
+  const approaches = [
     {
       icon: Target,
       title: "Community-Led Conservation",
@@ -25,6 +22,11 @@ const AboutUs = () => {
       icon: Award,
       title: "Transparency & Accountability",
       description: "We maintain the highest standards of financial management and are committed to open communication with all our stakeholders."
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation & Adaptability",
+      description: "We embrace creative solutions and continuously adapt our approaches to address emerging challenges in conservation."
     }
   ];
 
@@ -40,25 +42,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {values.map((value, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex justify-center mb-4">
-                  <value.icon className="h-12 w-12 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-muted-foreground">
-                  {value.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="bg-green-50 rounded-lg p-8">
+        <div className="bg-green-50 rounded-lg p-8 mb-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -78,21 +62,6 @@ const AboutUs = () => {
                 <li>• Promote policies supporting greenhouse gas emission reduction via forest restoration.</li>
                 <li>• Improve local community capacity through training on environmentally friendly agroforestry.</li>
               </ul>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="default" className="bg-green-600 hover:bg-green-700" asChild>
-                  <Link to="/tracking">
-                    Get Started
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button size="default" variant="outline" asChild>
-                  <Link to="/demo">
-                    <Play className="mr-2 h-5 w-5" />
-                    Watch Demo
-                  </Link>
-                </Button>
-              </div>
             </div>
             <div>
               <img
@@ -110,11 +79,28 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="mt-12 bg-background border rounded-lg p-6">
-          <h3 className="text-xl font-bold text-foreground mb-4">Innovation & Adaptability</h3>
-          <p className="text-muted-foreground">
-            We embrace creative solutions and continuously adapt our approaches to address emerging challenges in conservation.
-          </p>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            Our Approach
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {approaches.map((approach, index) => (
+            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex justify-center mb-4">
+                  <approach.icon className="h-12 w-12 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  {approach.title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {approach.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
