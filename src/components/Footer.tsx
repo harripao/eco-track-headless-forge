@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,16 +16,16 @@ const Footer = () => {
       { label: t('nav.news'), href: '#news' }
     ],
     resources: [
-      { label: 'E-books', href: '#resources' },
-      { label: 'Templates', href: '#resources' },
-      { label: 'Guides', href: '#resources' },
-      { label: 'Blog', href: '#news' }
+      { label: t('footer.resources.ebooks'), href: '#resources' },
+      { label: t('footer.resources.templates'), href: '#resources' },
+      { label: t('footer.resources.guides'), href: '#resources' },
+      { label: t('footer.resources.blog'), href: '#news' }
     ],
     support: [
       { label: t('nav.contact'), href: '#contact' },
-      { label: 'Help Center', href: '#' },
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Terms of Service', href: '#' }
+      { label: t('footer.support.helpCenter'), href: '#' },
+      { label: t('footer.support.privacy'), href: '#' },
+      { label: t('footer.support.terms'), href: '#' }
     ]
   };
 
@@ -50,7 +51,7 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold mb-4">Sentani</span>
               <p className="text-gray-300 mb-6 text-center lg:text-left">
-                Building harmony between people, forests and climate
+                {t('footer.description')}
               </p>
               <div className="flex space-x-4">
                 <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
@@ -71,7 +72,7 @@ const Footer = () => {
 
           {/* Links Sections */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Organization</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('footer.sections.organization')}</h3>
             <ul className="space-y-2">
               {footerLinks.organization.map((link, index) => (
                 <li key={index}>
@@ -87,7 +88,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Resources</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('footer.sections.resources')}</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
@@ -103,7 +104,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold text-lg mb-4">Support</h3>
+            <h3 className="font-semibold text-lg mb-4">{t('footer.sections.support')}</h3>
             <ul className="space-y-2">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
@@ -124,15 +125,15 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-green-400" />
-              <span className="text-gray-300">admin@sentani.org</span>
+              <span className="text-gray-300">{t('footer.email')}</span>
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-green-400" />
-              <span className="text-gray-300">+62 8128 5905 342</span>
+              <span className="text-gray-300">{t('footer.phone')}</span>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-green-400" />
-              <span className="text-gray-300">Bekasi, West Java Province, Indonesia</span>
+              <span className="text-gray-300">{t('footer.location')}</span>
             </div>
           </div>
         </div>
@@ -140,12 +141,12 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            © 2024 Sentani. All rights reserved.
+            {t('footer.copyright')}
           </p>
           <div className="mt-4 md:mt-0">
             <Button className="bg-green-600 hover:bg-green-700" asChild>
               <Link to="/donate">
-                Support Our Mission
+                {t('footer.donateMission')}
               </Link>
             </Button>
           </div>

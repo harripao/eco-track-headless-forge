@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Target, Users, Award, Lightbulb } from 'lucide-react';
@@ -9,23 +10,23 @@ const AboutUs = () => {
   const approaches = [
     {
       icon: Target,
-      title: "Community-Led Conservation",
-      description: "We believe lasting conservation can only succeed when local and indigenous communities are the decision-makers and primary beneficiaries."
+      title: t('about.community.title'),
+      description: t('about.community.description')
     },
     {
       icon: Users,
-      title: "Science-Based Approach",
-      description: "Our strategies and methods are grounded in rigorous scientific research and best practices in ecology and natural resource management."
+      title: t('about.science.title'),
+      description: t('about.science.description')
     },
     {
       icon: Award,
-      title: "Transparency & Accountability",
-      description: "We maintain the highest standards of financial management and are committed to open communication with all our stakeholders."
+      title: t('about.transparency.title'),
+      description: t('about.transparency.description')
     },
     {
       icon: Lightbulb,
-      title: "Innovation & Adaptability",
-      description: "We embrace creative solutions and continuously adapt our approaches to address emerging challenges in conservation."
+      title: t('about.innovation.title'),
+      description: t('about.innovation.description')
     }
   ];
 
@@ -34,10 +35,10 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            About Us
+            {t('about.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Working towards ecosystem balance and improved quality of life through forest preservation and community empowerment.
+            {t('about.subtitle')}
           </p>
         </div>
 
@@ -45,21 +46,21 @@ const AboutUs = () => {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                Our Vision
+                {t('about.vision.title')}
               </h3>
               <p className="text-muted-foreground mb-4">
-                Building harmony between people, forests and climate through community empowerment, conservation and forest restoration to support sustainable economy, low carbon development and climate resilience.
+                {t('about.vision.description')}
               </p>
               
               <h3 className="text-2xl font-bold text-foreground mb-4 mt-6">
-                Our Mission
+                {t('about.mission.title')}
               </h3>
               <ul className="text-muted-foreground mb-6 space-y-2">
-                <li>• Protect Indonesia's forest biodiversity in collaboration with all stakeholders.</li>
-                <li>• Develop forest-based carbon management systems to finance conservation and improve community welfare.</li>
-                <li>• Facilitate inclusive social forestry models and ensure local/indigenous community rights.</li>
-                <li>• Promote policies supporting greenhouse gas emission reduction via forest restoration.</li>
-                <li>• Improve local community capacity through training on environmentally friendly agroforestry.</li>
+                <li>• {t('about.mission.point1')}</li>
+                <li>• {t('about.mission.point2')}</li>
+                <li>• {t('about.mission.point3')}</li>
+                <li>• {t('about.mission.point4')}</li>
+                <li>• {t('about.mission.point5')}</li>
               </ul>
             </div>
             <div>
@@ -69,9 +70,9 @@ const AboutUs = () => {
                 className="rounded-lg shadow-lg w-full"
               />
               <div className="mt-6">
-                <h4 className="text-lg font-semibold text-foreground mb-2">Our Team</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-2">{t('about.team.title')}</h4>
                 <p className="text-muted-foreground text-sm">
-                  A diverse group of environmental scientists, data analysts, and sustainability experts dedicated to creating impactful solutions.
+                  {t('about.team.description')}
                 </p>
               </div>
             </div>
@@ -80,7 +81,7 @@ const AboutUs = () => {
 
         <div className="text-center mb-8">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Our Values
+            {t('about.values.title')}
           </h2>
         </div>
 

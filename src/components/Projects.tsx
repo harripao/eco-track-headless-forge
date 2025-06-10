@@ -14,36 +14,36 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Sumatra Forest Restoration',
-      description: 'Rehabilitating 5,000 hectares of degraded rainforest in North Sumatra through native species reforestation and community stewardship.',
+      title: t('projects.sumatra.title'),
+      description: t('projects.sumatra.description'),
       image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=250&fit=crop',
-      category: 'Forest',
-      impact: '5,000 hectares restored',
-      status: 'Ongoing'
+      category: t('projects.category.forest'),
+      impact: t('projects.sumatra.impact'),
+      status: t('projects.status.ongoing')
     },
     {
-      title: 'Indigenous Agroforestry Development',
-      description: 'Partnering with 12 indigenous communities to implement sustainable agroforestry systems that preserve biodiversity while enhancing livelihoods.',
+      title: t('projects.agroforestry.title'),
+      description: t('projects.agroforestry.description'),
       image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=250&fit=crop',
-      category: 'Community',
-      impact: '12 communities engaged',
-      status: 'Ongoing'
+      category: t('projects.category.community'),
+      impact: t('projects.agroforestry.impact'),
+      status: t('projects.status.ongoing')
     },
     {
-      title: 'Carbon Offset Marketplace',
-      description: 'Platform connecting businesses with verified carbon offset projects worldwide for immediate climate action.',
+      title: t('projects.carbon.title'),
+      description: t('projects.carbon.description'),
       image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=250&fit=crop',
-      category: 'Technology',
-      impact: '500K tons offset',
-      status: 'Beta'
+      category: t('projects.category.technology'),
+      impact: t('projects.carbon.impact'),
+      status: t('projects.status.beta')
     },
     {
-      title: 'Community Reforestation Program',
-      description: 'Engaging local communities in large-scale reforestation efforts to restore degraded forest landscapes.',
+      title: t('projects.reforestation.title'),
+      description: t('projects.reforestation.description'),
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop',
-      category: 'Forest',
-      impact: '3,000 trees planted',
-      status: 'Active'
+      category: t('projects.category.forest'),
+      impact: t('projects.reforestation.impact'),
+      status: t('projects.status.active')
     }
   ];
 
@@ -56,10 +56,10 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Our Projects
+            {t('projects.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover our impactful initiatives driving positive change for people and the planet
+            {t('projects.subtitle')}
           </p>
         </div>
 
@@ -73,7 +73,7 @@ const Projects = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute top-4 right-4">
-                  <Badge variant={project.status === 'Completed' ? 'default' : 'secondary'}>
+                  <Badge variant={project.status === t('projects.status.completed') ? 'default' : 'secondary'}>
                     {project.status}
                   </Badge>
                 </div>
@@ -94,7 +94,7 @@ const Projects = () => {
                   size="sm"
                   onClick={() => handleProjectClick(project)}
                 >
-                  Learn More
+                  {t('projects.learnMore')}
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
@@ -104,7 +104,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <Button size="lg" className="bg-green-600 hover:bg-green-700" asChild>
-            <Link to="/projects">View All Projects</Link>
+            <Link to="/projects">{t('projects.viewAll')}</Link>
           </Button>
         </div>
       </div>

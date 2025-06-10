@@ -14,38 +14,38 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-              Building harmony between people, forests and
-              <span className="text-green-600"> climate</span>
+              {t('hero.title')}
+              <span className="text-green-600"> {t('hero.climate')}</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Empowering communities, preserving biodiversity, and promoting sustainable solutions throughout Indonesia
+              {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-green-600 hover:bg-green-700" asChild>
                 <Link to="/donate">
-                  Donate Now
+                  {t('hero.donateNow')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link to="/projects">
                   <Play className="mr-2 h-5 w-5" />
-                  Explore Our Work
+                  {t('hero.exploreWork')}
                 </Link>
               </Button>
             </div>
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">10K+</div>
-                <div className="text-sm text-muted-foreground">Active Users</div>
+                <div className="text-sm text-muted-foreground">{t('hero.activeUsers')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">500+</div>
-                <div className="text-sm text-muted-foreground">Companies</div>
+                <div className="text-sm text-muted-foreground">{t('hero.companies')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">1M+</div>
-                <div className="text-sm text-muted-foreground">CO2 Tracked</div>
+                <div className="text-sm text-muted-foreground">{t('hero.co2Tracked')}</div>
               </div>
             </div>
           </div>
