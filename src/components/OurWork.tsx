@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Globe, Handshake, Scale, Target, Leaf } from 'lucide-react';
+import { Users, Globe, Handshake, Scale, Target, Leaf, TreePalm, TreeDeciduous, Wind } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const OurWork = () => {
@@ -40,6 +40,65 @@ const OurWork = () => {
     }
   ];
 
+  const focusAreas = [
+    {
+      icon: TreeDeciduous,
+      title: "Forest Conservation & Restoration",
+      description: "Our forest conservation and restoration programs are at the heart of Sentani's work. Indonesia's forests are among the most biodiverse in the world, providing critical habitat for endangered species and ecosystem services for millions of people.",
+      methods: [
+        "Natural regeneration facilitation",
+        "Native species reforestation", 
+        "Community-based forest monitoring",
+        "Sustainable forest management training",
+        "Forest fire prevention and control",
+        "Biodiversity monitoring and research"
+      ],
+      achievement: "Through collaborative partnerships with government agencies, local communities, and other stakeholders, we've targeted successfully protecting and restoring over 5,000 hectares of forest ecosystems across Indonesia."
+    },
+    {
+      icon: TreePalm,
+      title: "Community Agroforestry",
+      description: "Our community agroforestry programs integrate traditional knowledge with modern sustainable farming techniques to create resilient food systems while protecting forest ecosystems.",
+      explanation: "Agroforestry combines trees and shrubs with crop cultivation and/or livestock systems. This approach helps diversify income sources for local communities while maintaining forest cover and enhancing biodiversity.",
+      methods: [
+        "Training on sustainable agroforestry techniques",
+        "Establishing demonstration plots",
+        "Developing value chains for sustainable forest products", 
+        "Creating market access for agroforestry products",
+        "Seed and seedling distribution",
+        "Farmer-to-farmer knowledge exchange"
+      ],
+      achievement: "By working with over 75 indigenous communities targeted, we've helped improve food security and increase income while maintaining forest cover on traditional lands."
+    },
+    {
+      icon: Wind,
+      title: "Peatland Restoration",
+      description: "Indonesia's peatlands store enormous amounts of carbon and are critical for climate regulation. When degraded or burned, they release massive amounts of greenhouse gases. Our peatland protection work focuses on:",
+      methods: [
+        "Restoring hydrological functions through canal blocking and rewetting",
+        "Reforestation of degraded peatland areas",
+        "Community-based fire prevention and monitoring",
+        "Sustainable livelihood development on peatlands",
+        "Peatland mapping and carbon stock assessment",
+        "Advocacy for peatland restoration policies"
+      ],
+      achievement: "Through these interventions, we've targeted reduce fire incidents by over 70% in our project areas and restored thousands of hectares of degraded peatlands. Our peatland work contributes significantly to Indonesia's climate change mitigation efforts."
+    },
+    {
+      icon: Leaf,
+      title: "Carbon Management & Climate Resilience",
+      description: "Our carbon management program leverages the economic value of forest carbon to finance conservation and community development. We develop high-quality forest carbon projects that generate verified carbon credits while protecting biodiversity and supporting local livelihoods.",
+      methods: [
+        "Forest carbon stock assessment and monitoring",
+        "Development of forest protection and restoration projects under international standards (VCS, CCBS, etc.)",
+        "Benefit-sharing mechanisms that ensure equitable distribution of carbon revenues",
+        "Community capacity building for carbon project implementation",
+        "Climate vulnerability assessments and adaptation planning",
+        "Policy advocacy for forest-based climate solutions"
+      ]
+    }
+  ];
+
   return (
     <section id="work" className="py-16 bg-gradient-to-br from-gray-600 to-gray-800">
       <div className="container mx-auto px-4">
@@ -74,6 +133,62 @@ const OurWork = () => {
                   {approach.description}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-white rounded-lg p-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Our Focus Areas
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {focusAreas.map((area, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className="p-3 bg-emerald-100 rounded-full">
+                      <area.icon className="h-8 w-8 text-emerald-600" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground">
+                      {area.title}
+                    </h3>
+                  </div>
+                  
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                    {area.description}
+                  </p>
+
+                  {area.explanation && (
+                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                      {area.explanation}
+                    </p>
+                  )}
+
+                  {area.methods && (
+                    <div className="mb-4">
+                      <h4 className="text-lg font-semibold text-foreground mb-3">
+                        {area.title === "Peatland Restoration" ? "Our methods include:" : "Our approach includes:"}
+                      </h4>
+                      <ul className="space-y-2">
+                        {area.methods.map((method, methodIndex) => (
+                          <li key={methodIndex} className="text-muted-foreground">
+                            • {method}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {area.achievement && (
+                    <p className="text-muted-foreground leading-relaxed font-medium">
+                      {area.achievement}
+                    </p>
+                  )}
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
