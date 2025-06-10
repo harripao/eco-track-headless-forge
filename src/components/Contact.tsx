@@ -36,7 +36,7 @@ const Contact = () => {
             Get in Touch
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to start your sustainability journey? Contact us to learn how EcoTrack Pro can help you track and reduce your environmental impact.
+            Have questions or want to learn more about our work? We'd love to hear from you
           </p>
         </div>
 
@@ -115,8 +115,8 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-green-600 mt-1" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
-                    <p className="text-muted-foreground">hello@ecotrackpro.com</p>
-                    <p className="text-muted-foreground">support@ecotrackpro.com</p>
+                    <p className="text-muted-foreground">admin@sentani.org</p>
+                    <p className="text-muted-foreground">support@sentani.org</p>
                   </div>
                 </div>
               </CardContent>
@@ -128,7 +128,7 @@ const Contact = () => {
                   <Phone className="h-6 w-6 text-green-600 mt-1" />
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+62 812 8590 5342</p>
                     <p className="text-sm text-muted-foreground">Mon-Fri, 9am-6pm EST</p>
                   </div>
                 </div>
@@ -142,24 +142,14 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Visit Us</h3>
                     <p className="text-muted-foreground">
-                      123 Green Street<br />
-                      Sustainability City, SC 12345<br />
-                      United States
+                      Jl. Caman Raya No: 99 Jatibening,<br />
+                      Bekasi, West Java Province<br />
+                      Indonesia
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
-
-            <div className="bg-green-600 text-white p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="mb-4">
-                Join thousands of organizations already using EcoTrack Pro to make a positive environmental impact.
-              </p>
-              <Button className="bg-white text-green-600 hover:bg-gray-100">
-                Start Free Trial
-              </Button>
-            </div>
           </div>
         </div>
       </div>
