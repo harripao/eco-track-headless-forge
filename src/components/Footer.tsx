@@ -46,12 +46,12 @@ const Footer = () => {
                 <img 
                   src="/lovable-uploads/e429ddc2-9145-4e69-b185-e3d9b1d61927.png" 
                   alt="Sentani Logo" 
-                  className="h-16 w-auto brightness-0 invert"
+                  className="h-16 w-16 object-contain filter brightness-0 invert"
                 />
               </div>
               <span className="text-xl font-bold mb-4">Sentani</span>
               <p className="text-gray-300 mb-6 text-center lg:text-left">
-                Building tools for environmental sustainability and carbon tracking to create a better future for our planet.
+                Building harmony between people, forests and climate
               </p>
               <div className="flex space-x-4">
                 <Button size="sm" variant="ghost" className="text-white hover:text-green-400">
@@ -125,15 +125,15 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-green-400" />
-              <span className="text-gray-300">contact@sentani.org</span>
+              <span className="text-gray-300">admin@sentani.org</span>
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-green-400" />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
+              <span className="text-gray-300">+62 8128 5905 342</span>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-green-400" />
-              <span className="text-gray-300">San Francisco, CA</span>
+              <span className="text-gray-300">Bekasi, West Java Province, Indonesia</span>
             </div>
           </div>
         </div>
