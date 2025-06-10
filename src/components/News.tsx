@@ -1,12 +1,15 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import InquiryModal from './InquiryModal';
 
 const News = () => {
   const { t } = useLanguage();
+  const [showInquiry, setShowInquiry] = useState(false);
+  const [inquirySubject, setInquirySubject] = useState('');
 
   const newsItems = [
     {
@@ -43,6 +46,11 @@ const News = () => {
     }
   ];
 
+  const handleNewsClick = (item) => {
+    setInquirySubject(t(item.titleKey));
+    setShowInquiry(true);
+  };
+
   return (
     <section id="news" className="py-16 bg-gradient-to-br from-green-50 to-blue-50">
       <div className="container mx-auto px-4">
@@ -57,7 +65,11 @@ const News = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {newsItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+            <Card 
+              key={index} 
+              className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => handleNewsClick(item)}
+            >
               <div className="relative">
                 <img
                   src={item.image}
@@ -101,6 +113,13 @@ const News = () => {
           </div>
         </div>
       </div>
+
+      {/* Inquiry Modal */}
+      <InquiryModal
+        isOpen={showInquiry}
+        onClose={() => setShowInquiry(false)}
+        subject={inquirySubject}
+      />
     </section>
   );
 };

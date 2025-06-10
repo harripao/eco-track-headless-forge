@@ -1,13 +1,15 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import ProjectModal from './ProjectModal';
 
 const Projects = () => {
   const { t } = useLanguage();
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
     {
@@ -44,6 +46,10 @@ const Projects = () => {
     }
   ];
 
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+  };
+
   return (
     <section id="projects" className="py-16 bg-background">
       <div className="container mx-auto px-4">
@@ -58,7 +64,7 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
               <div className="relative">
                 <img
                   src={project.image}
@@ -82,7 +88,11 @@ const Projects = () => {
                 <p className="text-muted-foreground mb-4">
                   {project.description}
                 </p>
-                <Button variant="outline" size="sm">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => handleProjectClick(project)}
+                >
                   {t('projects.learnMore')}
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
@@ -97,6 +107,15 @@ const Projects = () => {
           </Button>
         </div>
       </div>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <ProjectModal
+          isOpen={!!selectedProject}
+          onClose={() => setSelectedProject(null)}
+          project={selectedProject}
+        />
+      )}
     </section>
   );
 };

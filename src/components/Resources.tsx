@@ -1,13 +1,18 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Download, ExternalLink, BookOpen, FileText, Video } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import EbookModal from './EbookModal';
+import InquiryModal from './InquiryModal';
 
 const Resources = () => {
   const { t } = useLanguage();
+  const [selectedEbook, setSelectedEbook] = useState(null);
+  const [showInquiry, setShowInquiry] = useState(false);
+  const [inquirySubject, setInquirySubject] = useState('');
 
   const resources = [
     {
@@ -60,6 +65,15 @@ const Resources = () => {
     'resources.free.certification'
   ];
 
+  const handleResourceClick = (resource) => {
+    setSelectedEbook(resource);
+  };
+
+  const handleFreeResourceClick = (resourceKey) => {
+    setInquirySubject(t(resourceKey));
+    setShowInquiry(true);
+  };
+
   return (
     <section id="resources" className="py-16 bg-background">
       <div className="container mx-auto px-4">
@@ -87,7 +101,11 @@ const Resources = () => {
                 <span className="text-2xl font-bold">$29.99</span>
                 <Badge className="bg-white text-green-600">{t('resources.featured.downloads')}</Badge>
               </div>
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+              <Button 
+                size="lg" 
+                className="bg-white text-green-600 hover:bg-gray-100"
+                onClick={() => handleResourceClick(resources[0])}
+              >
                 <Download className="mr-2 h-5 w-5" />
                 {t('resources.featured.button')}
               </Button>
@@ -105,7 +123,7 @@ const Resources = () => {
         {/* All Resources Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {resources.map((resource, index) => (
-            <Card key={index} className={`hover:shadow-lg transition-shadow ${resource.featured ? 'ring-2 ring-green-600' : ''}`}>
+            <Card key={index} className={`hover:shadow-lg transition-shadow cursor-pointer ${resource.featured ? 'ring-2 ring-green-600' : ''}`}>
               <div className="relative">
                 <img
                   src={resource.image}
@@ -131,7 +149,11 @@ const Resources = () => {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-green-600">{resource.price}</span>
-                  <Button size="sm" variant={resource.price === t('resources.pricing.free') ? 'outline' : 'default'}>
+                  <Button 
+                    size="sm" 
+                    variant={resource.price === t('resources.pricing.free') ? 'outline' : 'default'}
+                    onClick={() => handleResourceClick(resource)}
+                  >
                     {resource.price === t('resources.pricing.free') ? <Download className="h-4 w-4" /> : t('resources.buttons.buyNow')}
                   </Button>
                 </div>
@@ -155,8 +177,12 @@ const Resources = () => {
             {freeResourcesKeys.map((resourceKey, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg">
                 <FileText className="h-5 w-5 text-green-600" />
-                <span className="text-muted-foreground">{t(resourceKey)}</span>
-                <Button size="sm" variant="ghost">
+                <span className="text-muted-foreground flex-1">{t(resourceKey)}</span>
+                <Button 
+                  size="sm" 
+                  variant="ghost"
+                  onClick={() => handleFreeResourceClick(resourceKey)}
+                >
                   <ExternalLink className="h-4 w-4" />
                 </Button>
               </div>
@@ -164,6 +190,21 @@ const Resources = () => {
           </div>
         </div>
       </div>
+
+      {/* Modals */}
+      {selectedEbook && (
+        <EbookModal
+          isOpen={!!selectedEbook}
+          onClose={() => setSelectedEbook(null)}
+          ebook={selectedEbook}
+        />
+      )}
+
+      <InquiryModal
+        isOpen={showInquiry}
+        onClose={() => setShowInquiry(false)}
+        subject={inquirySubject}
+      />
     </section>
   );
 };
