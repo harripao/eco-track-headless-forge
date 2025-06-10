@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'id';
@@ -107,6 +106,8 @@ const translations = {
     'resources.badges.featured': 'Featured',
     'resources.labels.downloads': 'downloads',
     'resources.buttons.buyNow': 'Buy Now',
+    'resources.buttons.downloadFree': 'Download Free',
+    'resources.buttons.purchaseNow': 'Purchase Now',
     'resources.freeSection.title': 'Free Resources',
     'resources.freeSection.description': 'Access our collection of free sustainability resources and stay updated with the latest environmental insights.',
     'resources.free.newsletter': 'Monthly Sustainability Newsletter',
@@ -114,6 +115,14 @@ const translations = {
     'resources.free.bestPractices': 'Carbon Tracking Best Practices Guide',
     'resources.free.dashboard': 'Sustainability Metrics Dashboard Template',
     'resources.free.certification': 'Green Business Certification Roadmap',
+    'resources.modal.whatYouGet': 'What You\'ll Get',
+    'resources.modal.benefit1': 'Comprehensive 150-page guide',
+    'resources.modal.benefit2': 'Actionable implementation strategies',
+    'resources.modal.benefit3': 'Real-world case studies',
+    'resources.modal.benefit4': 'Downloadable templates and checklists',
+    'resources.modal.rating': '4.8/5 (120 reviews)',
+    'resources.modal.instantDownload': 'Instant Download',
+    'resources.messages.purchaseRedirect': 'You will be redirected to our secure payment processor.',
     
     // Footer
     'footer.description': 'Empowering businesses and individuals to track, understand, and reduce their environmental impact through innovative technology.',
@@ -226,6 +235,8 @@ const translations = {
     'resources.badges.featured': 'Unggulan',
     'resources.labels.downloads': 'unduhan',
     'resources.buttons.buyNow': 'Beli Sekarang',
+    'resources.buttons.downloadFree': 'Unduh Gratis',
+    'resources.buttons.purchaseNow': 'Beli Sekarang',
     'resources.freeSection.title': 'Sumber Daya Gratis',
     'resources.freeSection.description': 'Akses koleksi sumber daya keberlanjutan gratis kami dan tetap update dengan wawasan lingkungan terbaru.',
     'resources.free.newsletter': 'Newsletter Keberlanjutan Bulanan',
@@ -233,6 +244,14 @@ const translations = {
     'resources.free.bestPractices': 'Panduan Praktik Terbaik Pelacakan Karbon',
     'resources.free.dashboard': 'Template Dashboard Metrik Keberlanjutan',
     'resources.free.certification': 'Peta Jalan Sertifikasi Bisnis Hijau',
+    'resources.modal.whatYouGet': 'Yang Akan Anda Dapatkan',
+    'resources.modal.benefit1': 'Panduan komprehensif 150 halaman',
+    'resources.modal.benefit2': 'Strategi implementasi yang dapat ditindaklanjuti',
+    'resources.modal.benefit3': 'Studi kasus dunia nyata',
+    'resources.modal.benefit4': 'Template dan daftar periksa yang dapat diunduh',
+    'resources.modal.rating': '4,8/5 (120 ulasan)',
+    'resources.modal.instantDownload': 'Unduh Instan',
+    'resources.messages.purchaseRedirect': 'Anda akan diarahkan ke prosesor pembayaran aman kami.',
     
     // Footer
     'footer.description': 'Memberdayakan bisnis dan individu untuk melacak, memahami, dan mengurangi dampak lingkungan mereka melalui teknologi inovatif.',
@@ -273,3 +292,5 @@ export const useLanguage = () => {
   }
   return context;
 };
+
+export default LanguageContext;
