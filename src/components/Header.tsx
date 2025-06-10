@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import LanguageToggle from './LanguageToggle';
 
 const Header = () => {
@@ -22,14 +23,14 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <img 
               src="/lovable-uploads/e429ddc2-9145-4e69-b185-e3d9b1d61927.png" 
               alt="Sentani Logo" 
               className="h-8 w-auto"
             />
             <span className="text-xl font-bold text-foreground">Sentani</span>
-          </div>
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
