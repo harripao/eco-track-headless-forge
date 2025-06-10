@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Globe, Handshake, Scale, Target, Leaf, TreePalm, TreeDeciduous, Wind } from 'lucide-react';
+import { Users, Globe, Handshake, Scale, Target, Leaf, TreePalm, TreeDeciduous, Wind, Search, UserCheck, Settings, BarChart3, TrendingUp } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const OurWork = () => {
@@ -99,6 +98,39 @@ const OurWork = () => {
     }
   ];
 
+  const methodology = [
+    {
+      number: "1",
+      icon: Search,
+      title: "Assessment & Planning",
+      description: "We begin each initiative with rigorous scientific assessment and participatory planning processes. This includes biodiversity surveys, social assessments, stakeholder consultations, and analysis of threats and opportunities. We develop detailed plans with measurable objectives, activities, and timelines."
+    },
+    {
+      number: "2",
+      icon: UserCheck,
+      title: "Community Engagement & Capacity Building",
+      description: "We invest significant time in building relationships with local communities, understanding their needs and aspirations, and strengthening their capacity for sustainable resource management. This includes training, awareness-raising, and institutional development."
+    },
+    {
+      number: "3",
+      icon: Settings,
+      title: "Implementation & Adaptive Management",
+      description: "Our field teams work closely with communities and local partners to implement planned activities. We employ adaptive management approaches, continuously monitoring progress and adjusting strategies as needed based on feedback and changing conditions."
+    },
+    {
+      number: "4",
+      icon: BarChart3,
+      title: "Monitoring, Evaluation & Learning",
+      description: "We use robust monitoring systems to track ecological, social, and economic indicators of success. Regular evaluations help us assess impact, identify lessons learned, and improve our approaches. We share our learning through publications, workshops, and other knowledge exchange platforms."
+    },
+    {
+      number: "5",
+      icon: TrendingUp,
+      title: "Scaling & Replication",
+      description: "Successful approaches are documented and shared with government agencies, other NGOs, and relevant stakeholders to encourage adoption and scaling. We advocate for supportive policies and participate in networks and forums to spread effective conservation and development approaches."
+    }
+  ];
+
   return (
     <section id="work" className="py-16 bg-gradient-to-br from-gray-600 to-gray-800">
       <div className="container mx-auto px-4">
@@ -189,6 +221,37 @@ const OurWork = () => {
                   )}
                 </CardContent>
               </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-white rounded-lg p-8 mt-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Our Methodology
+            </h2>
+          </div>
+
+          <div className="space-y-8">
+            {methodology.map((step, index) => (
+              <div key={index} className="flex flex-col lg:flex-row items-start space-y-4 lg:space-y-0 lg:space-x-6">
+                <div className="flex items-center space-x-4 flex-shrink-0">
+                  <div className="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    {step.number}
+                  </div>
+                  <div className="p-3 bg-emerald-100 rounded-full">
+                    <step.icon className="h-8 w-8 text-emerald-600" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-foreground mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
