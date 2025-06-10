@@ -71,13 +71,13 @@ const AboutUs = () => {
                 {t('about.founded.description2')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="md" className="bg-green-600 hover:bg-green-700" asChild>
+                <Button size="default" className="bg-green-600 hover:bg-green-700" asChild>
                   <Link to="/tracking">
                     {t('hero.getStarted')}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button size="md" variant="outline" asChild>
+                <Button size="default" variant="outline" asChild>
                   <Link to="/demo">
                     <Play className="mr-2 h-5 w-5" />
                     {t('hero.watchDemo')}
