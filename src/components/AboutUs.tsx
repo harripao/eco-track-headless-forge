@@ -46,18 +46,18 @@ const AboutUs = () => {
               <Sprout className="h-8 w-8 text-purple-600" />
             </div>
             <h3 className="text-xl font-semibold mb-2">{t('about.founded.title')}</h3>
-            <p className="text-muted-foreground">{t('about.founded.description')}</p>
+            <p className="text-muted-foreground">{t('about.founded.description1')}</p>
           </div>
         </div>
 
         <div className="bg-muted/50 rounded-2xl p-8 md:p-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">{t('about.story.title')}</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">{t('about.founded.title')}</h3>
             <p className="text-lg text-muted-foreground mb-6">
-              {t('about.story.description1')}
+              {t('about.founded.description1')}
             </p>
             <p className="text-lg text-muted-foreground">
-              {t('about.story.description2')}
+              {t('about.founded.description2')}
             </p>
           </div>
         </div>

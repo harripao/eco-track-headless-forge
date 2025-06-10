@@ -15,16 +15,12 @@ interface ProjectModalProps {
     image: string;
     category: string;
     impact: string;
-    status?: string;
-  } | null;
+    status: string;
+  };
 }
 
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
   const { t } = useLanguage();
-
-  if (!project) {
-    return null;
-  }
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -42,7 +38,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             />
             <div className="absolute top-4 right-4">
               <Badge variant={project.status === 'Completed' ? 'default' : 'secondary'}>
-                {project.status || 'Active'}
+                {project.status}
               </Badge>
             </div>
           </div>
@@ -68,7 +64,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
               <Calendar className="h-5 w-5 text-green-600" />
               <div>
                 <p className="text-sm text-muted-foreground">Status</p>
-                <p className="font-semibold">{project.status || 'Active'}</p>
+                <p className="font-semibold">{project.status}</p>
               </div>
             </div>
           </div>
