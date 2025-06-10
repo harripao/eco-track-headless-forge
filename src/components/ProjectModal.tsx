@@ -47,7 +47,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             <div className="flex items-center space-x-2">
               <Target className="h-5 w-5 text-green-600" />
               <div>
-                <p className="text-sm text-muted-foreground">{t('projects.modal.category')}</p>
+                <p className="text-sm text-muted-foreground">Category</p>
                 <p className="font-semibold">{project.category}</p>
               </div>
             </div>
@@ -55,7 +55,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             <div className="flex items-center space-x-2">
               <Users className="h-5 w-5 text-green-600" />
               <div>
-                <p className="text-sm text-muted-foreground">{t('projects.modal.impact')}</p>
+                <p className="text-sm text-muted-foreground">Impact</p>
                 <p className="font-semibold">{project.impact}</p>
               </div>
             </div>
@@ -63,34 +63,34 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             <div className="flex items-center space-x-2">
               <Calendar className="h-5 w-5 text-green-600" />
               <div>
-                <p className="text-sm text-muted-foreground">{t('projects.modal.status')}</p>
+                <p className="text-sm text-muted-foreground">Status</p>
                 <p className="font-semibold">{project.status}</p>
               </div>
             </div>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-2">{t('projects.modal.description')}</h4>
+            <h4 className="font-semibold mb-2">Description</h4>
             <p className="text-muted-foreground">{project.description}</p>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-2">{t('projects.modal.keyFeatures')}</h4>
+            <h4 className="font-semibold mb-2">Key Features</h4>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-              <li>{t('projects.modal.feature1')}</li>
-              <li>{t('projects.modal.feature2')}</li>
-              <li>{t('projects.modal.feature3')}</li>
-              <li>{t('projects.modal.feature4')}</li>
+              <li>Community-driven approach with local engagement</li>
+              <li>Sustainable practices for long-term impact</li>
+              <li>Measurable environmental benefits</li>
+              <li>Partnership with local organizations</li>
             </ul>
           </div>
           
           <div className="flex space-x-2">
             <Button onClick={onClose} variant="outline" className="flex-1">
-              {t('common.close')}
+              Close
             </Button>
             <Button className="flex-1 bg-green-600 hover:bg-green-700">
               <ExternalLink className="mr-2 h-4 w-4" />
-              {t('projects.modal.viewDetails')}
+              View Details
             </Button>
           </div>
         </div>

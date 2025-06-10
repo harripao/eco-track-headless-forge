@@ -26,7 +26,7 @@ const InquiryModal = ({ isOpen, onClose, subject }: InquiryModalProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // This would send to backend
-    alert(t('contact.messages.inquirySent'));
+    alert('Inquiry sent successfully!');
     onClose();
     setFormData({ name: '', email: '', company: '', message: '' });
   };
@@ -42,12 +42,12 @@ const InquiryModal = ({ isOpen, onClose, subject }: InquiryModalProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-md">
         <DialogHeader>
-          <DialogTitle>{t('contact.inquiry.title')}</DialogTitle>
+          <DialogTitle>Send Inquiry</DialogTitle>
         </DialogHeader>
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <Label htmlFor="inquiry-name">{t('contact.form.name')} *</Label>
+            <Label htmlFor="inquiry-name">Name *</Label>
             <Input
               id="inquiry-name"
               name="name"
@@ -59,7 +59,7 @@ const InquiryModal = ({ isOpen, onClose, subject }: InquiryModalProps) => {
           </div>
           
           <div>
-            <Label htmlFor="inquiry-email">{t('contact.form.email')} *</Label>
+            <Label htmlFor="inquiry-email">Email *</Label>
             <Input
               id="inquiry-email"
               name="email"
@@ -72,7 +72,7 @@ const InquiryModal = ({ isOpen, onClose, subject }: InquiryModalProps) => {
           </div>
           
           <div>
-            <Label htmlFor="inquiry-company">{t('contact.form.company')}</Label>
+            <Label htmlFor="inquiry-company">Company/Organization</Label>
             <Input
               id="inquiry-company"
               name="company"
@@ -83,7 +83,7 @@ const InquiryModal = ({ isOpen, onClose, subject }: InquiryModalProps) => {
           </div>
           
           <div>
-            <Label htmlFor="inquiry-message">{t('contact.form.message')} *</Label>
+            <Label htmlFor="inquiry-message">Message *</Label>
             <Textarea
               id="inquiry-message"
               name="message"
@@ -92,17 +92,17 @@ const InquiryModal = ({ isOpen, onClose, subject }: InquiryModalProps) => {
               required
               rows={4}
               className="mt-1"
-              placeholder={subject ? `${t('contact.inquiry.about')} ${subject}` : t('contact.inquiry.placeholder')}
+              placeholder={subject ? `Inquiry about ${subject}` : "Tell us how we can help you..."}
             />
           </div>
           
           <div className="flex space-x-2">
             <Button type="button" variant="outline" onClick={onClose} className="flex-1">
-              {t('common.cancel')}
+              Cancel
             </Button>
             <Button type="submit" className="flex-1 bg-green-600 hover:bg-green-700">
               <Send className="mr-2 h-4 w-4" />
-              {t('contact.inquiry.send')}
+              Send Inquiry
             </Button>
           </div>
         </form>

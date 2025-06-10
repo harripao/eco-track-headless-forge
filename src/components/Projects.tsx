@@ -56,10 +56,10 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            {t('projects.title')}
+            Our Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t('projects.subtitle')}
+            Discover our impactful initiatives driving positive change for people and the planet
           </p>
         </div>
 
@@ -94,7 +94,7 @@ const Projects = () => {
                   size="sm"
                   onClick={() => handleProjectClick(project)}
                 >
-                  {t('projects.learnMore')}
+                  Learn More
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
@@ -104,7 +104,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <Button size="lg" className="bg-green-600 hover:bg-green-700" asChild>
-            <Link to="/projects">{t('projects.viewAll')}</Link>
+            <Link to="/projects">View All Projects</Link>
           </Button>
         </div>
       </div>

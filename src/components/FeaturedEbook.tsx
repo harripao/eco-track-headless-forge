@@ -17,16 +17,16 @@ const FeaturedEbook = ({ onEbookClick, featuredResource }: FeaturedEbookProps) =
     <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-lg p-8 mb-12 text-white">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div>
-          <Badge className="bg-white text-green-600 mb-4">{t('resources.featured.badge')}</Badge>
+          <Badge className="bg-white text-green-600 mb-4">Featured</Badge>
           <h3 className="text-3xl font-bold mb-4">
-            {t('resources.featured.title')}
+            Sustainable Business Practices E-book
           </h3>
           <p className="text-lg mb-6 opacity-90">
-            {t('resources.featured.description')}
+            Complete guide to implementing eco-friendly practices in your business operations.
           </p>
           <div className="flex items-center space-x-4 mb-6">
             <span className="text-2xl font-bold">$29.99</span>
-            <Badge className="bg-white text-green-600">{t('resources.featured.downloads')}</Badge>
+            <Badge className="bg-white text-green-600">5,000+ Downloads</Badge>
           </div>
           <Button 
             size="lg" 
@@ -34,13 +34,13 @@ const FeaturedEbook = ({ onEbookClick, featuredResource }: FeaturedEbookProps) =
             onClick={() => onEbookClick(featuredResource)}
           >
             <Download className="mr-2 h-5 w-5" />
-            {t('resources.featured.button')}
+            Download Now
           </Button>
         </div>
         <div>
           <img
             src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"
-            alt={t('resources.featured.imageAlt')}
+            alt="Featured E-book Cover"
             className="rounded-lg shadow-2xl w-full"
           />
         </div>
