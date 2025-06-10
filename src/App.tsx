@@ -9,6 +9,7 @@ import { Toaster } from './components/ui/toaster';
 import Tracking from './pages/Tracking';
 import Demo from './pages/Demo';
 import AllProjects from './pages/AllProjects';
+import Donate from './pages/Donate';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/tracking" element={<Tracking />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/projects" element={<AllProjects />} />
+          <Route path="/donate" element={<Donate />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

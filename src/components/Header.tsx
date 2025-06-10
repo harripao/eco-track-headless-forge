@@ -58,8 +58,10 @@ const Header = () => {
               </button>
             ))}
             <LanguageToggle />
-            <Button className="bg-green-600 hover:bg-green-700">
-              {t('nav.donate')}
+            <Button className="bg-green-600 hover:bg-green-700" asChild>
+              <Link to="/donate">
+                {t('nav.donate')}
+              </Link>
             </Button>
           </nav>
 
@@ -85,8 +87,10 @@ const Header = () => {
               ))}
               <div className="flex justify-between items-center mt-3">
                 <LanguageToggle />
-                <Button className="bg-green-600 hover:bg-green-700">
-                  {t('nav.donate')}
+                <Button className="bg-green-600 hover:bg-green-700" asChild>
+                  <Link to="/donate">
+                    {t('nav.donate')}
+                  </Link>
                 </Button>
               </div>
             </nav>
