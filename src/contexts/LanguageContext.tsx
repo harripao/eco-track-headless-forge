@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'id';
@@ -21,13 +20,14 @@ const translations = {
     'nav.donate': 'Donate',
     
     // Hero
-    'hero.title': 'Track Your Environmental Impact with',
-    'hero.subtitle': 'Professional carbon footprint tracking and sustainability management for businesses and individuals committed to making a positive environmental impact.',
-    'hero.getStarted': 'Get Started Free',
-    'hero.watchDemo': 'Watch Demo',
-    'hero.activeUsers': 'Active Users',
-    'hero.companies': 'Companies',
-    'hero.co2Tracked': 'Tons CO2 Tracked',
+    'hero.title': 'Building harmony between people, forests and',
+    'hero.climate': 'climate',
+    'hero.subtitle': 'Empowering communities, preserving biodiversity, and promoting sustainable solutions throughout Indonesia',
+    'hero.donateNow': 'Donate Now',
+    'hero.exploreWork': 'Explore Our Work',
+    'hero.communitiesEmpowered': 'Communities Empowered',
+    'hero.conservationProjects': 'Conservation Projects',
+    'hero.treesProtected': 'Trees Protected',
     
     // About
     'about.title': 'About Sentani',
@@ -188,13 +188,14 @@ const translations = {
     'nav.donate': 'Donasi',
     
     // Hero
-    'hero.title': 'Lacak Dampak Lingkungan Anda dengan',
-    'hero.subtitle': 'Pelacakan jejak karbon profesional dan manajemen keberlanjutan untuk bisnis dan individu yang berkomitmen membuat dampak lingkungan positif.',
-    'hero.getStarted': 'Mulai Gratis',
-    'hero.watchDemo': 'Tonton Demo',
-    'hero.activeUsers': 'Pengguna Aktif',
-    'hero.companies': 'Perusahaan',
-    'hero.co2Tracked': 'Ton CO2 Dilacak',
+    'hero.title': 'Membangun harmoni antara manusia, hutan dan',
+    'hero.climate': 'iklim',
+    'hero.subtitle': 'Memberdayakan komunitas, melestarikan keanekaragaman hayati, dan mempromosikan solusi berkelanjutan di seluruh Indonesia',
+    'hero.donateNow': 'Donasi Sekarang',
+    'hero.exploreWork': 'Jelajahi Karya Kami',
+    'hero.communitiesEmpowered': 'Komunitas Diberdayakan',
+    'hero.conservationProjects': 'Proyek Konservasi',
+    'hero.treesProtected': 'Pohon Dilindungi',
     
     // About
     'about.title': 'Tentang Sentani',
