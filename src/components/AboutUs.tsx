@@ -1,105 +1,65 @@
+
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Target, Users, Award, Lightbulb } from 'lucide-react';
+import { Target, Users, Award, Sprout } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const AboutUs = () => {
   const { t } = useLanguage();
 
-  const approaches = [
-    {
-      icon: Target,
-      title: "Community-Led Conservation",
-      description: "We believe lasting conservation can only succeed when local and indigenous communities are the decision-makers and primary beneficiaries."
-    },
-    {
-      icon: Users,
-      title: "Science-Based Approach",
-      description: "Our strategies and methods are grounded in rigorous scientific research and best practices in ecology and natural resource management."
-    },
-    {
-      icon: Award,
-      title: "Transparency & Accountability",
-      description: "We maintain the highest standards of financial management and are committed to open communication with all our stakeholders."
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation & Adaptability",
-      description: "We embrace creative solutions and continuously adapt our approaches to address emerging challenges in conservation."
-    }
-  ];
-
   return (
-    <section id="about" className="py-16 bg-background">
+    <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            About Us
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Working towards ecosystem balance and improved quality of life through forest preservation and community empowerment.
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('about.title')}</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            {t('about.subtitle')}
           </p>
         </div>
 
-        <div className="bg-green-50 rounded-lg p-8 mb-12">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Our Vision
-              </h3>
-              <p className="text-muted-foreground mb-4">
-                Building harmony between people, forests and climate through community empowerment, conservation and forest restoration to support sustainable economy, low carbon development and climate resilience.
-              </p>
-              
-              <h3 className="text-2xl font-bold text-foreground mb-4 mt-6">
-                Our Mission
-              </h3>
-              <ul className="text-muted-foreground mb-6 space-y-2">
-                <li>• Protect Indonesia's forest biodiversity in collaboration with all stakeholders.</li>
-                <li>• Develop forest-based carbon management systems to finance conservation and improve community welfare.</li>
-                <li>• Facilitate inclusive social forestry models and ensure local/indigenous community rights.</li>
-                <li>• Promote policies supporting greenhouse gas emission reduction via forest restoration.</li>
-                <li>• Improve local community capacity through training on environmentally friendly agroforestry.</li>
-              </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="text-center">
+            <div className="flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mx-auto mb-4">
+              <Target className="h-8 w-8 text-emerald-600" />
             </div>
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&h=300&fit=crop"
-                alt="Team working on sustainability"
-                className="rounded-lg shadow-lg w-full"
-              />
-              <div className="mt-6">
-                <h4 className="text-lg font-semibold text-foreground mb-2">Our Team</h4>
-                <p className="text-muted-foreground text-sm">
-                  A diverse group of environmental scientists, data analysts, and sustainability experts dedicated to creating impactful solutions.
-                </p>
-              </div>
+            <h3 className="text-xl font-semibold mb-2">{t('about.mission.title')}</h3>
+            <p className="text-muted-foreground">{t('about.mission.description')}</p>
+          </div>
+
+          <div className="text-center">
+            <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4">
+              <Users className="h-8 w-8 text-blue-600" />
             </div>
+            <h3 className="text-xl font-semibold mb-2">{t('about.team.title')}</h3>
+            <p className="text-muted-foreground">{t('about.team.description')}</p>
+          </div>
+
+          <div className="text-center">
+            <div className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mx-auto mb-4">
+              <Award className="h-8 w-8 text-green-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">{t('about.impact.title')}</h3>
+            <p className="text-muted-foreground">{t('about.impact.description')}</p>
+          </div>
+
+          <div className="text-center">
+            <div className="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4">
+              <Sprout className="h-8 w-8 text-purple-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">{t('about.founded.title')}</h3>
+            <p className="text-muted-foreground">{t('about.founded.description1')}</p>
           </div>
         </div>
 
-        <div className="text-center mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Our Values
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {approaches.map((approach, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="flex justify-center mb-4">
-                  <approach.icon className="h-12 w-12 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  {approach.title}
-                </h3>
-                <p className="text-muted-foreground">
-                  {approach.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="bg-muted/50 rounded-2xl p-8 md:p-12">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">{t('about.founded.title')}</h3>
+            <p className="text-lg text-muted-foreground mb-6">
+              {t('about.founded.description1')}
+            </p>
+            <p className="text-lg text-muted-foreground">
+              {t('about.founded.description2')}
+            </p>
+          </div>
         </div>
       </div>
     </section>
