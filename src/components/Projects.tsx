@@ -14,19 +14,19 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Global Corporate Carbon Tracking',
-      description: 'Implemented comprehensive carbon tracking for 50+ multinational corporations, resulting in 30% average emissions reduction.',
+      title: 'Sumatra Forest Restoration',
+      description: 'Rehabilitating 5,000 hectares of degraded rainforest in North Sumatra through native species reforestation and community stewardship.',
       image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=250&fit=crop',
-      category: 'Corporate',
-      impact: '2.5M tons CO2 reduced',
-      status: 'Completed'
+      category: 'Forest',
+      impact: '5,000 hectares restored',
+      status: 'Ongoing'
     },
     {
-      title: 'Smart City Sustainability Initiative',
-      description: 'Developed city-wide environmental monitoring system for urban sustainability planning and implementation.',
+      title: 'Indigenous Agroforestry Development',
+      description: 'Partnering with 12 indigenous communities to implement sustainable agroforestry systems that preserve biodiversity while enhancing livelihoods.',
       image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=250&fit=crop',
-      category: 'Municipal',
-      impact: '15 cities participating',
+      category: 'Community',
+      impact: '12 communities engaged',
       status: 'Ongoing'
     },
     {
