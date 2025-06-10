@@ -155,7 +155,24 @@ const translations = {
     'resources.modal.rating': '4.8/5 (120 reviews)',
     'resources.modal.instantDownload': 'Instant Download',
     'resources.messages.purchaseRedirect': 'You will be redirected to our secure payment processor.',
-    
+
+    // FAQ Section
+    'faq.title': 'Frequently Asked Questions',
+    'faq.contactTeam': 'Contact Our Team',
+    'faq.noQuestionFound': "Don't see your question answered here?",
+    'faq.question1': 'What is forest-based carbon management?',
+    'faq.answer1': 'Forest-based carbon management refers to activities that enhance or maintain the carbon stored in forest ecosystems. This includes protecting existing forests to prevent carbon emissions, restoring degraded forests to sequester more carbon, and sustainable forest management practices. These activities can generate carbon credits that can be sold on voluntary or compliance carbon markets, providing financial incentives for conservation and community development.',
+    'faq.question2': 'How does Sentani work with indigenous communities?',
+    'faq.answer2': 'Sentani follows a rights-based approach to working with indigenous communities. We recognize and respect their customary rights to land and resources, traditional knowledge, and governance systems. Our partnerships with indigenous communities are based on principles of Free, Prior, and Informed Consent (FPIC). We collaborate on project planning and implementation, ensure equitable benefit sharing, strengthen community institutions, and support communities in securing legal recognition of their rights.',
+    'faq.question3': 'What is agroforestry and how does it help conservation?',
+    'faq.answer3': 'Agroforestry is a land use management system that combines trees or shrubs with crop cultivation and/or livestock. By integrating trees into agricultural landscapes, agroforestry helps maintain forest cover and connectivity, enhances biodiversity, improves soil health, and provides multiple income streams for communities. This reduces pressure on primary forests while building climate resilience and supporting sustainable livelihoods.',
+    'faq.question4': 'Why are peatlands so important for climate change mitigation?',
+    'faq.answer4': 'Peatlands are wetland ecosystems that contain thick layers of organic soil (peat) formed from partially decomposed plant material. Although they cover only 3% of Earth\'s land surface, they store nearly 30% of all soil carbon. Indonesian peatlands are particularly carbon-rich. When drained or burned, peatlands release massive amounts of greenhouse gases. Protecting and restoring peatlands is therefore a critical climate change mitigation strategy with high carbon benefits per hectare.',
+    'faq.question5': 'How can I verify that my donation is being used effectively?',
+    'faq.answer5': 'Sentani is committed to transparency and accountability in all our operations. We publish annual reports with detailed financial information and program outcomes, undergo regular external audits, and maintain open communication with donors. For major gifts, we can provide tailored reporting on the specific projects supported. We also welcome donors to visit our project sites when possible to see the impact of their contributions firsthand.',
+    'faq.question6': 'What volunteer opportunities are available with Sentani?',
+    'faq.answer6': 'We offer various volunteer opportunities depending on your skills, interests, and availability. These range from field-based roles supporting conservation activities and community engagement to professional services like communications, graphic design, translation, research, and technical expertise. Both in-person and remote volunteering options are available. Visit our Volunteer page for current opportunities and application details.',
+
     // Footer
     'footer.description': 'Building harmony between people, forests and climate',
     'footer.sections.organization': 'Organization',
@@ -453,7 +470,24 @@ const translations = {
     'resources.modal.rating': '4,8/5 (120 ulasan)',
     'resources.modal.instantDownload': 'Unduh Instan',
     'resources.messages.purchaseRedirect': 'Anda akan diarahkan ke prosesor pembayaran aman kami.',
-    
+
+    // FAQ Section
+    'faq.title': 'Pertanyaan yang Sering Diajukan',
+    'faq.contactTeam': 'Hubungi Tim Kami',
+    'faq.noQuestionFound': 'Tidak menemukan pertanyaan Anda di sini?',
+    'faq.question1': 'Apa itu manajemen karbon berbasis hutan?',
+    'faq.answer1': 'Manajemen karbon berbasis hutan mengacu pada kegiatan yang meningkatkan atau mempertahankan karbon yang tersimpan dalam ekosistem hutan. Ini termasuk melindungi hutan yang ada untuk mencegah emisi karbon, memulihkan hutan yang terdegradasi untuk menyerap lebih banyak karbon, dan praktik pengelolaan hutan berkelanjutan. Kegiatan ini dapat menghasilkan kredit karbon yang dapat dijual di pasar karbon sukarela atau kepatuhan, memberikan insentif finansial untuk konservasi dan pembangunan komunitas.',
+    'faq.question2': 'Bagaimana Sentani bekerja dengan komunitas adat?',
+    'faq.answer2': 'Sentani mengikuti pendekatan berbasis hak dalam bekerja dengan komunitas adat. Kami mengakui dan menghormati hak adat mereka atas tanah dan sumber daya, pengetahuan tradisional, dan sistem tata kelola. Kemitraan kami dengan komunitas adat didasarkan pada prinsip Persetujuan Bebas, Didahulukan, dan Diinformasikan (FPIC). Kami berkolaborasi dalam perencanaan dan implementasi proyek, memastikan pembagian manfaat yang adil, memperkuat institusi komunitas, dan mendukung komunitas dalam mengamankan pengakuan hukum atas hak-hak mereka.',
+    'faq.question3': 'Apa itu agroforestri dan bagaimana membantu konservasi?',
+    'faq.answer3': 'Agroforestri adalah sistem pengelolaan penggunaan lahan yang menggabungkan pohon atau semak dengan budidaya tanaman dan/atau peternakan. Dengan mengintegrasikan pohon ke dalam lanskap pertanian, agroforestri membantu mempertahankan tutupan dan konektivitas hutan, meningkatkan keanekaragaman hayati, memperbaiki kesehatan tanah, dan menyediakan multiple sumber pendapatan bagi komunitas. Ini mengurangi tekanan pada hutan primer sambil membangun ketahanan iklim dan mendukung mata pencaharian berkelanjutan.',
+    'faq.question4': 'Mengapa lahan gambut sangat penting untuk mitigasi perubahan iklim?',
+    'faq.answer4': 'Lahan gambut adalah ekosistem lahan basah yang mengandung lapisan tanah organik tebal (gambut) yang terbentuk dari bahan tanaman yang terdekomposisi sebagian. Meskipun hanya menutupi 3% dari permukaan tanah Bumi, mereka menyimpan hampir 30% dari semua karbon tanah. Lahan gambut Indonesia sangat kaya karbon. Ketika dikeringkan atau dibakar, lahan gambut melepaskan gas rumah kaca dalam jumlah besar. Melindungi dan memulihkan lahan gambut oleh karena itu merupakan strategi mitigasi perubahan iklim yang kritis dengan manfaat karbon tinggi per hektar.',
+    'faq.question5': 'Bagaimana saya dapat memverifikasi bahwa donasi saya digunakan secara efektif?',
+    'faq.answer5': 'Sentani berkomitmen pada transparansi dan akuntabilitas dalam semua operasi kami. Kami menerbitkan laporan tahunan dengan informasi keuangan terperinci dan hasil program, menjalani audit eksternal reguler, dan mempertahankan komunikasi terbuka dengan para donatur. Untuk sumbangan besar, kami dapat menyediakan pelaporan yang disesuaikan dengan proyek-proyek tertentu yang didukung. Kami juga menyambut para donatur untuk mengunjungi lokasi proyek kami bila memungkinkan untuk melihat dampak kontribusi mereka secara langsung.',
+    'faq.question6': 'Kesempatan relawan apa yang tersedia dengan Sentani?',
+    'faq.answer6': 'Kami menawarkan berbagai kesempatan relawan tergantung pada keterampilan, minat, dan ketersediaan Anda. Ini berkisar dari peran berbasis lapangan yang mendukung kegiatan konservasi dan keterlibatan komunitas hingga layanan profesional seperti komunikasi, desain grafis, terjemahan, penelitian, dan keahlian teknis. Tersedia opsi relawan tatap muka dan jarak jauh. Kunjungi halaman Relawan kami untuk kesempatan terkini dan detail aplikasi.',
+
     // Footer
     'footer.description': 'Membangun harmoni antara manusia, hutan dan iklim',
     'footer.sections.organization': 'Organisasi',

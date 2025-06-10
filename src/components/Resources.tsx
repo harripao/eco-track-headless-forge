@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { BookOpen, FileText, Video } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -61,28 +60,28 @@ const Resources = () => {
 
   const faqItems = [
     {
-      question: "What is forest-based carbon management?",
-      answer: "Forest-based carbon management refers to activities that enhance or maintain the carbon stored in forest ecosystems. This includes protecting existing forests to prevent carbon emissions, restoring degraded forests to sequester more carbon, and sustainable forest management practices. These activities can generate carbon credits that can be sold on voluntary or compliance carbon markets, providing financial incentives for conservation and community development."
+      question: t('faq.question1'),
+      answer: t('faq.answer1')
     },
     {
-      question: "How does Sentani work with indigenous communities?",
-      answer: "Sentani follows a rights-based approach to working with indigenous communities. We recognize and respect their customary rights to land and resources, traditional knowledge, and governance systems. Our partnerships with indigenous communities are based on principles of Free, Prior, and Informed Consent (FPIC). We collaborate on project planning and implementation, ensure equitable benefit sharing, strengthen community institutions, and support communities in securing legal recognition of their rights."
+      question: t('faq.question2'),
+      answer: t('faq.answer2')
     },
     {
-      question: "What is agroforestry and how does it help conservation?",
-      answer: "Agroforestry is a land use management system that combines trees or shrubs with crop cultivation and/or livestock. By integrating trees into agricultural landscapes, agroforestry helps maintain forest cover and connectivity, enhances biodiversity, improves soil health, and provides multiple income streams for communities. This reduces pressure on primary forests while building climate resilience and supporting sustainable livelihoods."
+      question: t('faq.question3'),
+      answer: t('faq.answer3')
     },
     {
-      question: "Why are peatlands so important for climate change mitigation?",
-      answer: "Peatlands are wetland ecosystems that contain thick layers of organic soil (peat) formed from partially decomposed plant material. Although they cover only 3% of Earth's land surface, they store nearly 30% of all soil carbon. Indonesian peatlands are particularly carbon-rich. When drained or burned, peatlands release massive amounts of greenhouse gases. Protecting and restoring peatlands is therefore a critical climate change mitigation strategy with high carbon benefits per hectare."
+      question: t('faq.question4'),
+      answer: t('faq.answer4')
     },
     {
-      question: "How can I verify that my donation is being used effectively?",
-      answer: "Sentani is committed to transparency and accountability in all our operations. We publish annual reports with detailed financial information and program outcomes, undergo regular external audits, and maintain open communication with donors. For major gifts, we can provide tailored reporting on the specific projects supported. We also welcome donors to visit our project sites when possible to see the impact of their contributions firsthand."
+      question: t('faq.question5'),
+      answer: t('faq.answer5')
     },
     {
-      question: "What volunteer opportunities are available with Sentani?",
-      answer: "We offer various volunteer opportunities depending on your skills, interests, and availability. These range from field-based roles supporting conservation activities and community engagement to professional services like communications, graphic design, translation, research, and technical expertise. Both in-person and remote volunteering options are available. Visit our Volunteer page for current opportunities and application details."
+      question: t('faq.question6'),
+      answer: t('faq.answer6')
     }
   ];
 
@@ -138,7 +137,7 @@ const Resources = () => {
         <div className="mt-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Frequently Asked Questions
+              {t('faq.title')}
             </h3>
           </div>
           
@@ -158,14 +157,14 @@ const Resources = () => {
             
             <div className="text-center mt-12">
               <p className="text-lg text-muted-foreground mb-6">
-                Don't see your question answered here?
+                {t('faq.noQuestionFound')}
               </p>
               <Button 
                 size="lg" 
                 className="bg-green-600 hover:bg-green-700"
                 onClick={handleContactTeam}
               >
-                Contact Our Team
+                {t('faq.contactTeam')}
               </Button>
             </div>
           </div>
