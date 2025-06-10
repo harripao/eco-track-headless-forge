@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -46,7 +45,7 @@ const Footer = () => {
                 <img 
                   src="/lovable-uploads/e429ddc2-9145-4e69-b185-e3d9b1d61927.png" 
                   alt="Sentani Logo" 
-                  className="h-16 w-16 object-contain filter brightness-0 invert"
+                  className="h-16 w-auto object-contain"
                 />
               </div>
               <span className="text-xl font-bold mb-4">Sentani</span>
