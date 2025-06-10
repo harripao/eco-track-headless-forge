@@ -37,15 +37,15 @@ const Hero = () => {
             <div className="grid grid-cols-3 gap-6 pt-8">
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">10K+</div>
-                <div className="text-sm text-muted-foreground">{t('hero.activeUsers')}</div>
+                <div className="text-sm text-muted-foreground">Active Users</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">500+</div>
-                <div className="text-sm text-muted-foreground">{t('hero.companies')}</div>
+                <div className="text-sm text-muted-foreground">Companies</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">1M+</div>
-                <div className="text-sm text-muted-foreground">{t('hero.co2Tracked')}</div>
+                <div className="text-sm text-muted-foreground">CO2 Tracked</div>
               </div>
             </div>
           </div>

@@ -30,20 +30,20 @@ const Projects = () => {
       status: 'Ongoing'
     },
     {
-      title: 'E-book: Sustainable Business Practices',
-      description: 'Comprehensive guide to implementing sustainable practices in modern business operations.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop',
-      category: 'Education',
-      impact: '10K+ downloads',
-      status: 'Available'
-    },
-    {
       title: 'Carbon Offset Marketplace',
       description: 'Platform connecting businesses with verified carbon offset projects worldwide for immediate climate action.',
       image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=250&fit=crop',
       category: 'Technology',
       impact: '500K tons offset',
       status: 'Beta'
+    },
+    {
+      title: 'Community Reforestation Program',
+      description: 'Engaging local communities in large-scale reforestation efforts to restore degraded forest landscapes.',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop',
+      category: 'Forest',
+      impact: '3,000 trees planted',
+      status: 'Active'
     }
   ];
 
