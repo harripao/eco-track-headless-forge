@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Users, Globe, Handshake, Scale, Target, Leaf, TreePalm, TreeDeciduous, Wind, Search, UserCheck, Settings, BarChart3, TrendingUp } from 'lucide-react';
@@ -9,91 +10,91 @@ const OurWork = () => {
   const approaches = [
     {
       icon: Users,
-      title: "Community-Centered",
-      description: "We place local and indigenous communities at the center of all our initiatives, respecting traditional knowledge and customary rights."
+      title: t('work.approach.community.title'),
+      description: t('work.approach.community.description')
     },
     {
       icon: Globe,
-      title: "Holistic & Integrated",
-      description: "We address environmental, social, and economic challenges through comprehensive, integrated approaches."
+      title: t('work.approach.holistic.title'),
+      description: t('work.approach.holistic.description')
     },
     {
       icon: Handshake,
-      title: "Collaborative",
-      description: "We forge partnerships across sectors - government, private, academic, and civil society - to maximize impact and sustainability."
+      title: t('work.approach.collaborative.title'),
+      description: t('work.approach.collaborative.description')
     },
     {
       icon: Scale,
-      title: "Rights-Based",
-      description: "We uphold and advocate for the rights of local communities, ensuring equitable access to resources and benefits."
+      title: t('work.approach.rights.title'),
+      description: t('work.approach.rights.description')
     },
     {
       icon: Target,
-      title: "Results-Oriented",
-      description: "We focus on measurable outcomes and impact, continuously monitoring and evaluating our progress."
+      title: t('work.approach.results.title'),
+      description: t('work.approach.results.description')
     },
     {
       icon: Leaf,
-      title: "Ecologically Sound",
-      description: "We employ approaches that work with natural processes and enhance ecosystem functions."
+      title: t('work.approach.ecological.title'),
+      description: t('work.approach.ecological.description')
     }
   ];
 
   const focusAreas = [
     {
       icon: TreeDeciduous,
-      title: "Forest Conservation & Restoration",
-      description: "Our forest conservation and restoration programs are at the heart of Sentani's work. Indonesia's forests are among the most biodiverse in the world, providing critical habitat for endangered species and ecosystem services for millions of people.",
+      title: t('work.focus.forest.title'),
+      description: t('work.focus.forest.description'),
       methods: [
-        "Natural regeneration facilitation",
-        "Native species reforestation", 
-        "Community-based forest monitoring",
-        "Sustainable forest management training",
-        "Forest fire prevention and control",
-        "Biodiversity monitoring and research"
+        t('work.focus.forest.method1'),
+        t('work.focus.forest.method2'),
+        t('work.focus.forest.method3'),
+        t('work.focus.forest.method4'),
+        t('work.focus.forest.method5'),
+        t('work.focus.forest.method6')
       ],
-      achievement: "Through collaborative partnerships with government agencies, local communities, and other stakeholders, we've targeted successfully protecting and restoring over 5,000 hectares of forest ecosystems across Indonesia."
+      achievement: t('work.focus.forest.achievement')
     },
     {
       icon: TreePalm,
-      title: "Community Agroforestry",
-      description: "Our community agroforestry programs integrate traditional knowledge with modern sustainable farming techniques to create resilient food systems while protecting forest ecosystems.",
-      explanation: "Agroforestry combines trees and shrubs with crop cultivation and/or livestock systems. This approach helps diversify income sources for local communities while maintaining forest cover and enhancing biodiversity.",
+      title: t('work.focus.agroforestry.title'),
+      description: t('work.focus.agroforestry.description'),
+      explanation: t('work.focus.agroforestry.explanation'),
       methods: [
-        "Training on sustainable agroforestry techniques",
-        "Establishing demonstration plots",
-        "Developing value chains for sustainable forest products", 
-        "Creating market access for agroforestry products",
-        "Seed and seedling distribution",
-        "Farmer-to-farmer knowledge exchange"
+        t('work.focus.agroforestry.method1'),
+        t('work.focus.agroforestry.method2'),
+        t('work.focus.agroforestry.method3'),
+        t('work.focus.agroforestry.method4'),
+        t('work.focus.agroforestry.method5'),
+        t('work.focus.agroforestry.method6')
       ],
-      achievement: "By working with over 75 indigenous communities targeted, we've helped improve food security and increase income while maintaining forest cover on traditional lands."
+      achievement: t('work.focus.agroforestry.achievement')
     },
     {
       icon: Wind,
-      title: "Peatland Restoration",
-      description: "Indonesia's peatlands store enormous amounts of carbon and are critical for climate regulation. When degraded or burned, they release massive amounts of greenhouse gases. Our peatland protection work focuses on:",
+      title: t('work.focus.peatland.title'),
+      description: t('work.focus.peatland.description'),
       methods: [
-        "Restoring hydrological functions through canal blocking and rewetting",
-        "Reforestation of degraded peatland areas",
-        "Community-based fire prevention and monitoring",
-        "Sustainable livelihood development on peatlands",
-        "Peatland mapping and carbon stock assessment",
-        "Advocacy for peatland restoration policies"
+        t('work.focus.peatland.method1'),
+        t('work.focus.peatland.method2'),
+        t('work.focus.peatland.method3'),
+        t('work.focus.peatland.method4'),
+        t('work.focus.peatland.method5'),
+        t('work.focus.peatland.method6')
       ],
-      achievement: "Through these interventions, we've targeted reduce fire incidents by over 70% in our project areas and restored thousands of hectares of degraded peatlands. Our peatland work contributes significantly to Indonesia's climate change mitigation efforts."
+      achievement: t('work.focus.peatland.achievement')
     },
     {
       icon: Leaf,
-      title: "Carbon Management & Climate Resilience",
-      description: "Our carbon management program leverages the economic value of forest carbon to finance conservation and community development. We develop high-quality forest carbon projects that generate verified carbon credits while protecting biodiversity and supporting local livelihoods.",
+      title: t('work.focus.carbon.title'),
+      description: t('work.focus.carbon.description'),
       methods: [
-        "Forest carbon stock assessment and monitoring",
-        "Development of forest protection and restoration projects under international standards (VCS, CCBS, etc.)",
-        "Benefit-sharing mechanisms that ensure equitable distribution of carbon revenues",
-        "Community capacity building for carbon project implementation",
-        "Climate vulnerability assessments and adaptation planning",
-        "Policy advocacy for forest-based climate solutions"
+        t('work.focus.carbon.method1'),
+        t('work.focus.carbon.method2'),
+        t('work.focus.carbon.method3'),
+        t('work.focus.carbon.method4'),
+        t('work.focus.carbon.method5'),
+        t('work.focus.carbon.method6')
       ]
     }
   ];
@@ -102,32 +103,32 @@ const OurWork = () => {
     {
       number: "1",
       icon: Search,
-      title: "Assessment & Planning",
-      description: "We begin each initiative with rigorous scientific assessment and participatory planning processes. This includes biodiversity surveys, social assessments, stakeholder consultations, and analysis of threats and opportunities. We develop detailed plans with measurable objectives, activities, and timelines."
+      title: t('work.methodology.assessment.title'),
+      description: t('work.methodology.assessment.description')
     },
     {
       number: "2",
       icon: UserCheck,
-      title: "Community Engagement & Capacity Building",
-      description: "We invest significant time in building relationships with local communities, understanding their needs and aspirations, and strengthening their capacity for sustainable resource management. This includes training, awareness-raising, and institutional development."
+      title: t('work.methodology.engagement.title'),
+      description: t('work.methodology.engagement.description')
     },
     {
       number: "3",
       icon: Settings,
-      title: "Implementation & Adaptive Management",
-      description: "Our field teams work closely with communities and local partners to implement planned activities. We employ adaptive management approaches, continuously monitoring progress and adjusting strategies as needed based on feedback and changing conditions."
+      title: t('work.methodology.implementation.title'),
+      description: t('work.methodology.implementation.description')
     },
     {
       number: "4",
       icon: BarChart3,
-      title: "Monitoring, Evaluation & Learning",
-      description: "We use robust monitoring systems to track ecological, social, and economic indicators of success. Regular evaluations help us assess impact, identify lessons learned, and improve our approaches. We share our learning through publications, workshops, and other knowledge exchange platforms."
+      title: t('work.methodology.monitoring.title'),
+      description: t('work.methodology.monitoring.description')
     },
     {
       number: "5",
       icon: TrendingUp,
-      title: "Scaling & Replication",
-      description: "Successful approaches are documented and shared with government agencies, other NGOs, and relevant stakeholders to encourage adoption and scaling. We advocate for supportive policies and participate in networks and forums to spread effective conservation and development approaches."
+      title: t('work.methodology.scaling.title'),
+      description: t('work.methodology.scaling.description')
     }
   ];
 
@@ -136,17 +137,17 @@ const OurWork = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Our Work
+            {t('work.title')}
           </h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Explore our key focus areas where we're making a difference in Indonesia's environmental landscape.
+            {t('work.subtitle')}
           </p>
         </div>
 
         <div className="bg-white rounded-lg p-8 mb-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Our Approach
+              {t('work.approach.title')}
             </h2>
           </div>
 
@@ -172,7 +173,7 @@ const OurWork = () => {
         <div className="bg-white rounded-lg p-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Our Focus Areas
+              {t('work.focus.title')}
             </h2>
           </div>
 
@@ -202,7 +203,7 @@ const OurWork = () => {
                   {area.methods && (
                     <div className="mb-4">
                       <h4 className="text-lg font-semibold text-foreground mb-3">
-                        {area.title === "Peatland Restoration" ? "Our methods include:" : "Our approach includes:"}
+                        {area.title === t('work.focus.peatland.title') ? t('work.focus.methodsInclude') : t('work.focus.approachInclude')}
                       </h4>
                       <ul className="space-y-2">
                         {area.methods.map((method, methodIndex) => (
@@ -228,7 +229,7 @@ const OurWork = () => {
         <div className="bg-white rounded-lg p-8 mt-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Our Methodology
+              {t('work.methodology.title')}
             </h2>
           </div>
 

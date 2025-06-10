@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -9,6 +10,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProjectModal from '@/components/ProjectModal';
+import { Link } from 'react-router-dom';
 
 const AllProjects = () => {
   const { t } = useLanguage();
@@ -17,75 +19,75 @@ const AllProjects = () => {
 
   const allProjects = [
     {
-      title: 'Global Corporate Carbon Tracking',
-      description: 'Implemented comprehensive carbon tracking for 50+ multinational corporations, resulting in 30% average emissions reduction.',
+      title: t('allProjects.project1.title'),
+      description: t('allProjects.project1.description'),
       image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=250&fit=crop',
-      category: 'Corporate',
-      impact: '2.5M tons CO2 reduced',
-      status: 'Completed',
+      category: t('allProjects.category.corporate'),
+      impact: t('allProjects.project1.impact'),
+      status: t('allProjects.status.completed'),
       year: '2023'
     },
     {
-      title: 'Smart City Sustainability Initiative',
-      description: 'Developed city-wide environmental monitoring system for urban sustainability planning and implementation.',
+      title: t('allProjects.project2.title'),
+      description: t('allProjects.project2.description'),
       image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=250&fit=crop',
-      category: 'Municipal',
-      impact: '15 cities participating',
-      status: 'Ongoing',
+      category: t('allProjects.category.municipal'),
+      impact: t('allProjects.project2.impact'),
+      status: t('allProjects.status.ongoing'),
       year: '2024'
     },
     {
-      title: 'E-book: Sustainable Business Practices',
-      description: 'Comprehensive guide to implementing sustainable practices in modern business operations.',
+      title: t('allProjects.project3.title'),
+      description: t('allProjects.project3.description'),
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop',
-      category: 'Education',
-      impact: '10K+ downloads',
-      status: 'Available',
+      category: t('allProjects.category.education'),
+      impact: t('allProjects.project3.impact'),
+      status: t('allProjects.status.available'),
       year: '2023'
     },
     {
-      title: 'Carbon Offset Marketplace',
-      description: 'Platform connecting businesses with verified carbon offset projects worldwide for immediate climate action.',
+      title: t('allProjects.project4.title'),
+      description: t('allProjects.project4.description'),
       image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=250&fit=crop',
-      category: 'Technology',
-      impact: '500K tons offset',
-      status: 'Beta',
+      category: t('allProjects.category.technology'),
+      impact: t('allProjects.project4.impact'),
+      status: t('allProjects.status.beta'),
       year: '2024'
     },
     {
-      title: 'Sustainable Supply Chain Analysis',
-      description: 'End-to-end supply chain sustainability assessment and optimization for manufacturing sector.',
+      title: t('allProjects.project5.title'),
+      description: t('allProjects.project5.description'),
       image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&h=250&fit=crop',
-      category: 'Corporate',
-      impact: '35% reduced carbon footprint',
-      status: 'Completed',
+      category: t('allProjects.category.corporate'),
+      impact: t('allProjects.project5.impact'),
+      status: t('allProjects.status.completed'),
       year: '2023'
     },
     {
-      title: 'Renewable Energy Transition',
-      description: 'Strategic planning and implementation of renewable energy systems for industrial clients.',
+      title: t('allProjects.project6.title'),
+      description: t('allProjects.project6.description'),
       image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=400&h=250&fit=crop',
-      category: 'Energy',
-      impact: '60% reduction in fossil fuel use',
-      status: 'Completed',
+      category: t('allProjects.category.energy'),
+      impact: t('allProjects.project6.impact'),
+      status: t('allProjects.status.completed'),
       year: '2022'
     },
     {
-      title: 'Sustainable Agriculture Initiative',
-      description: 'Regenerative farming practices implementation across 50,000 hectares of agricultural land.',
+      title: t('allProjects.project7.title'),
+      description: t('allProjects.project7.description'),
       image: 'https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=400&h=250&fit=crop',
-      category: 'Agriculture',
-      impact: '45% water usage reduction',
-      status: 'Ongoing',
+      category: t('allProjects.category.agriculture'),
+      impact: t('allProjects.project7.impact'),
+      status: t('allProjects.status.ongoing'),
       year: '2024'
     },
     {
-      title: 'Zero Waste Office Program',
-      description: 'Comprehensive office waste reduction program for corporate environments.',
+      title: t('allProjects.project8.title'),
+      description: t('allProjects.project8.description'),
       image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=400&h=250&fit=crop',
-      category: 'Corporate',
-      impact: '95% waste diversion rate',
-      status: 'Available',
+      category: t('allProjects.category.corporate'),
+      impact: t('allProjects.project8.impact'),
+      status: t('allProjects.status.available'),
       year: '2023'
     }
   ];
@@ -106,9 +108,11 @@ const AllProjects = () => {
       
       <main className="flex-grow py-12">
         <div className="container mx-auto px-4">
-          <Button variant="outline" className="mb-6" onClick={() => window.history.back()}>
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            {t('common.back')}
+          <Button variant="outline" className="mb-6" asChild>
+            <Link to="/">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              {t('common.back')}
+            </Link>
           </Button>
           
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
@@ -150,7 +154,7 @@ const AllProjects = () => {
                         className="w-full h-48 object-cover"
                       />
                       <div className="absolute top-4 right-4">
-                        <Badge variant={project.status === 'Completed' ? 'default' : 'secondary'}>
+                        <Badge variant={project.status === t('allProjects.status.completed') ? 'default' : 'secondary'}>
                           {project.status}
                         </Badge>
                       </div>
@@ -195,7 +199,7 @@ const AllProjects = () => {
               <TabsContent key={category} value={category} className="mt-6">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredProjects
-                    .filter(p => p.category.toLowerCase() === category)
+                    .filter(p => p.category.toLowerCase() === t(`allProjects.category.${category}`).toLowerCase())
                     .map((project, index) => (
                       <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
                         <div className="relative">
@@ -205,7 +209,7 @@ const AllProjects = () => {
                             className="w-full h-48 object-cover"
                           />
                           <div className="absolute top-4 right-4">
-                            <Badge variant={project.status === 'Completed' ? 'default' : 'secondary'}>
+                            <Badge variant={project.status === t('allProjects.status.completed') ? 'default' : 'secondary'}>
                               {project.status}
                             </Badge>
                           </div>
@@ -237,7 +241,7 @@ const AllProjects = () => {
                     ))}
                 </div>
                 
-                {filteredProjects.filter(p => p.category.toLowerCase() === category).length === 0 && (
+                {filteredProjects.filter(p => p.category.toLowerCase() === t(`allProjects.category.${category}`).toLowerCase()).length === 0 && (
                   <div className="text-center py-12">
                     <h3 className="text-xl font-medium mb-2">{t('allProjects.noResults')}</h3>
                     <p className="text-muted-foreground">{t('allProjects.tryDifferent')}</p>

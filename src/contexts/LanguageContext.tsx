@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'id';
@@ -173,7 +172,140 @@ const translations = {
     'footer.phone': '+62 8128 5905 342',
     'footer.location': 'Bekasi, West Java Province, Indonesia',
     'footer.copyright': '© 2024 Sentani. All rights reserved.',
-    'footer.donateMission': 'Support Our Mission'
+    'footer.donateMission': 'Support Our Mission',
+
+    // Common
+    'common.back': 'Back',
+    
+    // Work Section
+    'work.title': 'Our Work',
+    'work.subtitle': 'Explore our key focus areas where we\'re making a difference in Indonesia\'s environmental landscape.',
+    'work.approach.title': 'Our Approach',
+    'work.approach.community.title': 'Community-Centered',
+    'work.approach.community.description': 'We place local and indigenous communities at the center of all our initiatives, respecting traditional knowledge and customary rights.',
+    'work.approach.holistic.title': 'Holistic & Integrated',
+    'work.approach.holistic.description': 'We address environmental, social, and economic challenges through comprehensive, integrated approaches.',
+    'work.approach.collaborative.title': 'Collaborative',
+    'work.approach.collaborative.description': 'We forge partnerships across sectors - government, private, academic, and civil society - to maximize impact and sustainability.',
+    'work.approach.rights.title': 'Rights-Based',
+    'work.approach.rights.description': 'We uphold and advocate for the rights of local communities, ensuring equitable access to resources and benefits.',
+    'work.approach.results.title': 'Results-Oriented',
+    'work.approach.results.description': 'We focus on measurable outcomes and impact, continuously monitoring and evaluating our progress.',
+    'work.approach.ecological.title': 'Ecologically Sound',
+    'work.approach.ecological.description': 'We employ approaches that work with natural processes and enhance ecosystem functions.',
+    
+    'work.focus.title': 'Our Focus Areas',
+    'work.focus.methodsInclude': 'Our methods include:',
+    'work.focus.approachInclude': 'Our approach includes:',
+    
+    'work.focus.forest.title': 'Forest Conservation & Restoration',
+    'work.focus.forest.description': 'Our forest conservation and restoration programs are at the heart of Sentani\'s work. Indonesia\'s forests are among the most biodiverse in the world, providing critical habitat for endangered species and ecosystem services for millions of people.',
+    'work.focus.forest.method1': 'Natural regeneration facilitation',
+    'work.focus.forest.method2': 'Native species reforestation',
+    'work.focus.forest.method3': 'Community-based forest monitoring',
+    'work.focus.forest.method4': 'Sustainable forest management training',
+    'work.focus.forest.method5': 'Forest fire prevention and control',
+    'work.focus.forest.method6': 'Biodiversity monitoring and research',
+    'work.focus.forest.achievement': 'Through collaborative partnerships with government agencies, local communities, and other stakeholders, we\'ve targeted successfully protecting and restoring over 5,000 hectares of forest ecosystems across Indonesia.',
+    
+    'work.focus.agroforestry.title': 'Community Agroforestry',
+    'work.focus.agroforestry.description': 'Our community agroforestry programs integrate traditional knowledge with modern sustainable farming techniques to create resilient food systems while protecting forest ecosystems.',
+    'work.focus.agroforestry.explanation': 'Agroforestry combines trees and shrubs with crop cultivation and/or livestock systems. This approach helps diversify income sources for local communities while maintaining forest cover and enhancing biodiversity.',
+    'work.focus.agroforestry.method1': 'Training on sustainable agroforestry techniques',
+    'work.focus.agroforestry.method2': 'Establishing demonstration plots',
+    'work.focus.agroforestry.method3': 'Developing value chains for sustainable forest products',
+    'work.focus.agroforestry.method4': 'Creating market access for agroforestry products',
+    'work.focus.agroforestry.method5': 'Seed and seedling distribution',
+    'work.focus.agroforestry.method6': 'Farmer-to-farmer knowledge exchange',
+    'work.focus.agroforestry.achievement': 'By working with over 75 indigenous communities targeted, we\'ve helped improve food security and increase income while maintaining forest cover on traditional lands.',
+    
+    'work.focus.peatland.title': 'Peatland Restoration',
+    'work.focus.peatland.description': 'Indonesia\'s peatlands store enormous amounts of carbon and are critical for climate regulation. When degraded or burned, they release massive amounts of greenhouse gases. Our peatland protection work focuses on:',
+    'work.focus.peatland.method1': 'Restoring hydrological functions through canal blocking and rewetting',
+    'work.focus.peatland.method2': 'Reforestation of degraded peatland areas',
+    'work.focus.peatland.method3': 'Community-based fire prevention and monitoring',
+    'work.focus.peatland.method4': 'Sustainable livelihood development on peatlands',
+    'work.focus.peatland.method5': 'Peatland mapping and carbon stock assessment',
+    'work.focus.peatland.method6': 'Advocacy for peatland restoration policies',
+    'work.focus.peatland.achievement': 'Through these interventions, we\'ve targeted reduce fire incidents by over 70% in our project areas and restored thousands of hectares of degraded peatlands. Our peatland work contributes significantly to Indonesia\'s climate change mitigation efforts.',
+    
+    'work.focus.carbon.title': 'Carbon Management & Climate Resilience',
+    'work.focus.carbon.description': 'Our carbon management program leverages the economic value of forest carbon to finance conservation and community development. We develop high-quality forest carbon projects that generate verified carbon credits while protecting biodiversity and supporting local livelihoods.',
+    'work.focus.carbon.method1': 'Forest carbon stock assessment and monitoring',
+    'work.focus.carbon.method2': 'Development of forest protection and restoration projects under international standards (VCS, CCBS, etc.)',
+    'work.focus.carbon.method3': 'Benefit-sharing mechanisms that ensure equitable distribution of carbon revenues',
+    'work.focus.carbon.method4': 'Community capacity building for carbon project implementation',
+    'work.focus.carbon.method5': 'Climate vulnerability assessments and adaptation planning',
+    'work.focus.carbon.method6': 'Policy advocacy for forest-based climate solutions',
+    
+    'work.methodology.title': 'Our Methodology',
+    'work.methodology.assessment.title': 'Assessment & Planning',
+    'work.methodology.assessment.description': 'We begin each initiative with rigorous scientific assessment and participatory planning processes. This includes biodiversity surveys, social assessments, stakeholder consultations, and analysis of threats and opportunities. We develop detailed plans with measurable objectives, activities, and timelines.',
+    'work.methodology.engagement.title': 'Community Engagement & Capacity Building',
+    'work.methodology.engagement.description': 'We invest significant time in building relationships with local communities, understanding their needs and aspirations, and strengthening their capacity for sustainable resource management. This includes training, awareness-raising, and institutional development.',
+    'work.methodology.implementation.title': 'Implementation & Adaptive Management',
+    'work.methodology.implementation.description': 'Our field teams work closely with communities and local partners to implement planned activities. We employ adaptive management approaches, continuously monitoring progress and adjusting strategies as needed based on feedback and changing conditions.',
+    'work.methodology.monitoring.title': 'Monitoring, Evaluation & Learning',
+    'work.methodology.monitoring.description': 'We use robust monitoring systems to track ecological, social, and economic indicators of success. Regular evaluations help us assess impact, identify lessons learned, and improve our approaches. We share our learning through publications, workshops, and other knowledge exchange platforms.',
+    'work.methodology.scaling.title': 'Scaling & Replication',
+    'work.methodology.scaling.description': 'Successful approaches are documented and shared with government agencies, other NGOs, and relevant stakeholders to encourage adoption and scaling. We advocate for supportive policies and participate in networks and forums to spread effective conservation and development approaches.',
+    
+    // All Projects
+    'allProjects.title': 'All Projects',
+    'allProjects.subtitle': 'Discover our complete portfolio of environmental initiatives and sustainable development programs.',
+    'allProjects.search': 'Search projects...',
+    'allProjects.noResults': 'No projects found',
+    'allProjects.tryDifferent': 'Try adjusting your search or filter criteria.',
+    
+    'allProjects.filters.all': 'All Projects',
+    'allProjects.filters.corporate': 'Corporate',
+    'allProjects.filters.municipal': 'Municipal',
+    'allProjects.filters.education': 'Education',
+    'allProjects.filters.technology': 'Technology',
+    
+    'allProjects.category.corporate': 'Corporate',
+    'allProjects.category.municipal': 'Municipal',
+    'allProjects.category.education': 'Education',
+    'allProjects.category.technology': 'Technology',
+    'allProjects.category.energy': 'Energy',
+    'allProjects.category.agriculture': 'Agriculture',
+    
+    'allProjects.status.completed': 'Completed',
+    'allProjects.status.ongoing': 'Ongoing',
+    'allProjects.status.available': 'Available',
+    'allProjects.status.beta': 'Beta',
+    
+    'allProjects.project1.title': 'Global Corporate Carbon Tracking',
+    'allProjects.project1.description': 'Implemented comprehensive carbon tracking for 50+ multinational corporations, resulting in 30% average emissions reduction.',
+    'allProjects.project1.impact': '2.5M tons CO2 reduced',
+    
+    'allProjects.project2.title': 'Smart City Sustainability Initiative',
+    'allProjects.project2.description': 'Developed city-wide environmental monitoring system for urban sustainability planning and implementation.',
+    'allProjects.project2.impact': '15 cities participating',
+    
+    'allProjects.project3.title': 'E-book: Sustainable Business Practices',
+    'allProjects.project3.description': 'Comprehensive guide to implementing sustainable practices in modern business operations.',
+    'allProjects.project3.impact': '10K+ downloads',
+    
+    'allProjects.project4.title': 'Carbon Offset Marketplace',
+    'allProjects.project4.description': 'Platform connecting businesses with verified carbon offset projects worldwide for immediate climate action.',
+    'allProjects.project4.impact': '500K tons offset',
+    
+    'allProjects.project5.title': 'Sustainable Supply Chain Analysis',
+    'allProjects.project5.description': 'End-to-end supply chain sustainability assessment and optimization for manufacturing sector.',
+    'allProjects.project5.impact': '35% reduced carbon footprint',
+    
+    'allProjects.project6.title': 'Renewable Energy Transition',
+    'allProjects.project6.description': 'Strategic planning and implementation of renewable energy systems for industrial clients.',
+    'allProjects.project6.impact': '60% reduction in fossil fuel use',
+    
+    'allProjects.project7.title': 'Sustainable Agriculture Initiative',
+    'allProjects.project7.description': 'Regenerative farming practices implementation across 50,000 hectares of agricultural land.',
+    'allProjects.project7.impact': '45% water usage reduction',
+    
+    'allProjects.project8.title': 'Zero Waste Office Program',
+    'allProjects.project8.description': 'Comprehensive office waste reduction program for corporate environments.',
+    'allProjects.project8.impact': '95% waste diversion rate'
   },
   id: {
     // Header
@@ -338,7 +470,140 @@ const translations = {
     'footer.phone': '+62 8128 5905 342',
     'footer.location': 'Bekasi, Provinsi Jawa Barat, Indonesia',
     'footer.copyright': '© 2024 Sentani. Hak cipta dilindungi.',
-    'footer.donateMission': 'Dukung Misi Kami'
+    'footer.donateMission': 'Dukung Misi Kami',
+
+    // Common
+    'common.back': 'Kembali',
+    
+    // Work Section
+    'work.title': 'Karya Kami',
+    'work.subtitle': 'Jelajahi area fokus utama kami dimana kami membuat perbedaan dalam lanskap lingkungan Indonesia.',
+    'work.approach.title': 'Pendekatan Kami',
+    'work.approach.community.title': 'Berpusat pada Komunitas',
+    'work.approach.community.description': 'Kami menempatkan komunitas lokal dan adat sebagai pusat dari semua inisiatif kami, menghormati pengetahuan tradisional dan hak-hak adat.',
+    'work.approach.holistic.title': 'Holistik & Terintegrasi',
+    'work.approach.holistic.description': 'Kami mengatasi tantangan lingkungan, sosial, dan ekonomi melalui pendekatan yang komprehensif dan terintegrasi.',
+    'work.approach.collaborative.title': 'Kolaboratif',
+    'work.approach.collaborative.description': 'Kami menjalin kemitraan lintas sektor - pemerintah, swasta, akademik, dan masyarakat sipil - untuk memaksimalkan dampak dan keberlanjutan.',
+    'work.approach.rights.title': 'Berbasis Hak',
+    'work.approach.rights.description': 'Kami menjunjung tinggi dan memperjuangkan hak-hak komunitas lokal, memastikan akses yang adil terhadap sumber daya dan manfaat.',
+    'work.approach.results.title': 'Berorientasi Hasil',
+    'work.approach.results.description': 'Kami fokus pada hasil yang dapat diukur dan dampak, terus memantau dan mengevaluasi kemajuan kami.',
+    'work.approach.ecological.title': 'Secara Ekologis Sehat',
+    'work.approach.ecological.description': 'Kami menggunakan pendekatan yang bekerja dengan proses alami dan meningkatkan fungsi ekosistem.',
+    
+    'work.focus.title': 'Area Fokus Kami',
+    'work.focus.methodsInclude': 'Metode kami meliputi:',
+    'work.focus.approachInclude': 'Pendekatan kami meliputi:',
+    
+    'work.focus.forest.title': 'Konservasi & Restorasi Hutan',
+    'work.focus.forest.description': 'Program konservasi dan restorasi hutan kami adalah inti dari karya Sentani. Hutan Indonesia termasuk yang paling beragam secara biologis di dunia, menyediakan habitat penting bagi spesies terancam dan layanan ekosistem bagi jutaan orang.',
+    'work.focus.forest.method1': 'Fasilitasi regenerasi alami',
+    'work.focus.forest.method2': 'Reboisasi spesies asli',
+    'work.focus.forest.method3': 'Pemantauan hutan berbasis komunitas',
+    'work.focus.forest.method4': 'Pelatihan pengelolaan hutan berkelanjutan',
+    'work.focus.forest.method5': 'Pencegahan dan pengendalian kebakaran hutan',
+    'work.focus.forest.method6': 'Pemantauan keanekaragaman hayati dan penelitian',
+    'work.focus.forest.achievement': 'Melalui kemitraan kolaboratif dengan lembaga pemerintah, komunitas lokal, dan pemangku kepentingan lainnya, kami telah menargetkan berhasil melindungi dan memulihkan lebih dari 5.000 hektar ekosistem hutan di seluruh Indonesia.',
+    
+    'work.focus.agroforestry.title': 'Agroforestri Komunitas',
+    'work.focus.agroforestry.description': 'Program agroforestri komunitas kami mengintegrasikan pengetahuan tradisional dengan teknik pertanian berkelanjutan modern untuk menciptakan sistem pangan yang tangguh sambil melindungi ekosistem hutan.',
+    'work.focus.agroforestry.explanation': 'Agroforestri menggabungkan pohon dan semak dengan budidaya tanaman dan/atau sistem peternakan. Pendekatan ini membantu diversifikasi sumber pendapatan bagi komunitas lokal sambil mempertahankan tutupan hutan dan meningkatkan keanekaragaman hayati.',
+    'work.focus.agroforestry.method1': 'Pelatihan tentang teknik agroforestri berkelanjutan',
+    'work.focus.agroforestry.method2': 'Mendirikan plot demonstrasi',
+    'work.focus.agroforestry.method3': 'Mengembangkan rantai nilai untuk produk hutan berkelanjutan',
+    'work.focus.agroforestry.method4': 'Menciptakan akses pasar untuk produk agroforestri',
+    'work.focus.agroforestry.method5': 'Distribusi benih dan bibit',
+    'work.focus.agroforestry.method6': 'Pertukaran pengetahuan petani ke petani',
+    'work.focus.agroforestry.achievement': 'Dengan bekerja dengan lebih dari 75 komunitas adat yang ditargetkan, kami telah membantu meningkatkan ketahanan pangan dan meningkatkan pendapatan sambil mempertahankan tutupan hutan di tanah tradisional.',
+    
+    'work.focus.peatland.title': 'Restorasi Lahan Gambut',
+    'work.focus.peatland.description': 'Lahan gambut Indonesia menyimpan karbon dalam jumlah besar dan sangat penting untuk regulasi iklim. Ketika terdegradasi atau terbakar, mereka melepaskan gas rumah kaca dalam jumlah besar. Karya perlindungan lahan gambut kami berfokus pada:',
+    'work.focus.peatland.method1': 'Memulihkan fungsi hidrologi melalui penyumbatan kanal dan pembasahan kembali',
+    'work.focus.peatland.method2': 'Reboisasi area lahan gambut yang terdegradasi',
+    'work.focus.peatland.method3': 'Pencegahan dan pemantauan kebakaran berbasis komunitas',
+    'work.focus.peatland.method4': 'Pengembangan mata pencaharian berkelanjutan di lahan gambut',
+    'work.focus.peatland.method5': 'Pemetaan lahan gambut dan penilaian stok karbon',
+    'work.focus.peatland.method6': 'Advokasi untuk kebijakan restorasi lahan gambut',
+    'work.focus.peatland.achievement': 'Melalui intervensi ini, kami telah menargetkan mengurangi insiden kebakaran lebih dari 70% di area proyek kami dan memulihkan ribuan hektar lahan gambut yang terdegradasi. Karya lahan gambut kami berkontribusi signifikan terhadap upaya mitigasi perubahan iklim Indonesia.',
+    
+    'work.focus.carbon.title': 'Manajemen Karbon & Ketahanan Iklim',
+    'work.focus.carbon.description': 'Program manajemen karbon kami memanfaatkan nilai ekonomi karbon hutan untuk membiayai konservasi dan pembangunan komunitas. Kami mengembangkan proyek karbon hutan berkualitas tinggi yang menghasilkan kredit karbon terverifikasi sambil melindungi keanekaragaman hayati dan mendukung mata pencaharian lokal.',
+    'work.focus.carbon.method1': 'Penilaian dan pemantauan stok karbon hutan',
+    'work.focus.carbon.method2': 'Pengembangan proyek perlindungan dan restorasi hutan di bawah standar internasional (VCS, CCBS, dll.)',
+    'work.focus.carbon.method3': 'Mekanisme pembagian manfaat yang memastikan distribusi pendapatan karbon yang adil',
+    'work.focus.carbon.method4': 'Pembangunan kapasitas komunitas untuk implementasi proyek karbon',
+    'work.focus.carbon.method5': 'Penilaian kerentanan iklim dan perencanaan adaptasi',
+    'work.focus.carbon.method6': 'Advokasi kebijakan untuk solusi iklim berbasis hutan',
+    
+    'work.methodology.title': 'Metodologi Kami',
+    'work.methodology.assessment.title': 'Penilaian & Perencanaan',
+    'work.methodology.assessment.description': 'Kami memulai setiap inisiatif dengan penilaian ilmiah yang ketat dan proses perencanaan partisipatif. Ini termasuk survei keanekaragaman hayati, penilaian sosial, konsultasi pemangku kepentingan, dan analisis ancaman dan peluang. Kami mengembangkan rencana rinci dengan tujuan, aktivitas, dan jadwal yang dapat diukur.',
+    'work.methodology.engagement.title': 'Keterlibatan Komunitas & Pembangunan Kapasitas',
+    'work.methodology.engagement.description': 'Kami menginvestasikan waktu yang signifikan dalam membangun hubungan dengan komunitas lokal, memahami kebutuhan dan aspirasi mereka, dan memperkuat kapasitas mereka untuk pengelolaan sumber daya berkelanjutan. Ini termasuk pelatihan, peningkatan kesadaran, dan pembangunan institusi.',
+    'work.methodology.implementation.title': 'Implementasi & Manajemen Adaptif',
+    'work.methodology.implementation.description': 'Tim lapangan kami bekerja erat dengan komunitas dan mitra lokal untuk mengimplementasikan aktivitas yang direncanakan. Kami menggunakan pendekatan manajemen adaptif, terus memantau kemajuan dan menyesuaikan strategi sesuai kebutuhan berdasarkan umpan balik dan kondisi yang berubah.',
+    'work.methodology.monitoring.title': 'Pemantauan, Evaluasi & Pembelajaran',
+    'work.methodology.monitoring.description': 'Kami menggunakan sistem pemantauan yang kuat untuk melacak indikator ekologis, sosial, dan ekonomi kesuksesan. Evaluasi rutin membantu kami menilai dampak, mengidentifikasi pelajaran yang dipetik, dan meningkatkan pendekatan kami. Kami berbagi pembelajaran melalui publikasi, workshop, dan platform pertukaran pengetahuan lainnya.',
+    'work.methodology.scaling.title': 'Penskalaan & Replikasi',
+    'work.methodology.scaling.description': 'Pendekatan yang berhasil didokumentasikan dan dibagikan dengan lembaga pemerintah, LSM lain, dan pemangku kepentingan terkait untuk mendorong adopsi dan penskalaan. Kami mengadvokasi kebijakan yang mendukung dan berpartisipasi dalam jaringan dan forum untuk menyebarkan pendekatan konservasi dan pembangunan yang efektif.',
+    
+    // All Projects
+    'allProjects.title': 'Semua Proyek',
+    'allProjects.subtitle': 'Temukan portofolio lengkap inisiatif lingkungan dan program pembangunan berkelanjutan kami.',
+    'allProjects.search': 'Cari proyek...',
+    'allProjects.noResults': 'Tidak ada proyek ditemukan',
+    'allProjects.tryDifferent': 'Coba sesuaikan kriteria pencarian atau filter Anda.',
+    
+    'allProjects.filters.all': 'Semua Proyek',
+    'allProjects.filters.corporate': 'Korporat',
+    'allProjects.filters.municipal': 'Pemerintah Daerah',
+    'allProjects.filters.education': 'Pendidikan',
+    'allProjects.filters.technology': 'Teknologi',
+    
+    'allProjects.category.corporate': 'Korporat',
+    'allProjects.category.municipal': 'Pemerintah Daerah',
+    'allProjects.category.education': 'Pendidikan',
+    'allProjects.category.technology': 'Teknologi',
+    'allProjects.category.energy': 'Energi',
+    'allProjects.category.agriculture': 'Pertanian',
+    
+    'allProjects.status.completed': 'Selesai',
+    'allProjects.status.ongoing': 'Berlangsung',
+    'allProjects.status.available': 'Tersedia',
+    'allProjects.status.beta': 'Beta',
+    
+    'allProjects.project1.title': 'Pelacakan Karbon Korporat Global',
+    'allProjects.project1.description': 'Mengimplementasikan pelacakan karbon komprehensif untuk 50+ perusahaan multinasional, menghasilkan rata-rata pengurangan emisi 30%.',
+    'allProjects.project1.impact': '2,5M ton CO2 dikurangi',
+    
+    'allProjects.project2.title': 'Inisiatif Keberlanjutan Kota Pintar',
+    'allProjects.project2.description': 'Mengembangkan sistem pemantauan lingkungan seluruh kota untuk perencanaan dan implementasi keberlanjutan perkotaan.',
+    'allProjects.project2.impact': '15 kota berpartisipasi',
+    
+    'allProjects.project3.title': 'E-book: Praktik Bisnis Berkelanjutan',
+    'allProjects.project3.description': 'Panduan komprehensif untuk mengimplementasikan praktik berkelanjutan dalam operasi bisnis modern.',
+    'allProjects.project3.impact': '10K+ unduhan',
+    
+    'allProjects.project4.title': 'Pasar Offset Karbon',
+    'allProjects.project4.description': 'Platform yang menghubungkan bisnis dengan proyek offset karbon terverifikasi di seluruh dunia untuk aksi iklim segera.',
+    'allProjects.project4.impact': '500K ton offset',
+    
+    'allProjects.project5.title': 'Analisis Rantai Pasokan Berkelanjutan',
+    'allProjects.project5.description': 'Penilaian dan optimasi keberlanjutan rantai pasokan end-to-end untuk sektor manufaktur.',
+    'allProjects.project5.impact': '35% jejak karbon berkurang',
+    
+    'allProjects.project6.title': 'Transisi Energi Terbarukan',
+    'allProjects.project6.description': 'Perencanaan strategis dan implementasi sistem energi terbarukan untuk klien industri.',
+    'allProjects.project6.impact': '60% pengurangan penggunaan bahan bakar fosil',
+    
+    'allProjects.project7.title': 'Inisiatif Pertanian Berkelanjutan',
+    'allProjects.project7.description': 'Implementasi praktik pertanian regeneratif di 50.000 hektar lahan pertanian.',
+    'allProjects.project7.impact': '45% pengurangan penggunaan air',
+    
+    'allProjects.project8.title': 'Program Kantor Tanpa Limbah',
+    'allProjects.project8.description': 'Program pengurangan limbah kantor komprehensif untuk lingkungan korporat.',
+    'allProjects.project8.impact': '95% tingkat pengalihan limbah'
   }
 };
 
