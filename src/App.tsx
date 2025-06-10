@@ -10,6 +10,7 @@ import Tracking from './pages/Tracking';
 import Demo from './pages/Demo';
 import AllProjects from './pages/AllProjects';
 import Donate from './pages/Donate';
+import NewsPage from './pages/NewsPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/demo" element={<Demo />} />
           <Route path="/projects" element={<AllProjects />} />
           <Route path="/donate" element={<Donate />} />
+          <Route path="/news/:id" element={<NewsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

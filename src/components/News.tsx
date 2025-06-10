@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const News = () => {
   const { t } = useLanguage();
@@ -11,6 +12,7 @@ const News = () => {
 
   const newsItems = [
     {
+      id: '1',
       titleKey: 'news.item1.title',
       excerptKey: 'news.item1.excerpt',
       author: 'Sarah Johnson',
@@ -19,6 +21,7 @@ const News = () => {
       image: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=400&h=200&fit=crop'
     },
     {
+      id: '2',
       titleKey: 'news.item2.title',
       excerptKey: 'news.item2.excerpt',
       author: 'Dr. Michael Chen',
@@ -27,6 +30,7 @@ const News = () => {
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=200&fit=crop'
     },
     {
+      id: '3',
       titleKey: 'news.item3.title',
       excerptKey: 'news.item3.excerpt',
       author: 'Emma Rodriguez',
@@ -35,6 +39,7 @@ const News = () => {
       image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=200&fit=crop'
     },
     {
+      id: '4',
       titleKey: 'news.item4.title',
       excerptKey: 'news.item4.excerpt',
       author: 'David Thompson',
@@ -69,41 +74,40 @@ const News = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {filteredNews.map((item, index) => (
-            <Card 
-              key={index} 
-              className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-            >
-              <div className="relative">
-                <img
-                  src={item.image}
-                  alt={t(item.titleKey)}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-4 left-4">
-                  <Badge>{t(item.categoryKey)}</Badge>
-                </div>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl hover:text-green-600 transition-colors">
-                  {t(item.titleKey)}
-                </CardTitle>
-                <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                  <div className="flex items-center">
-                    <User className="h-4 w-4 mr-1" />
-                    {item.author}
-                  </div>
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {new Date(item.date).toLocaleDateString()}
+            <Link key={index} to={`/news/${item.id}`}>
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="relative">
+                  <img
+                    src={item.image}
+                    alt={t(item.titleKey)}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <Badge>{t(item.categoryKey)}</Badge>
                   </div>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  {t(item.excerptKey)}
-                </p>
-              </CardContent>
-            </Card>
+                <CardHeader>
+                  <CardTitle className="text-xl hover:text-green-600 transition-colors">
+                    {t(item.titleKey)}
+                  </CardTitle>
+                  <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                    <div className="flex items-center">
+                      <User className="h-4 w-4 mr-1" />
+                      {item.author}
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-1" />
+                      {new Date(item.date).toLocaleDateString()}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    {t(item.excerptKey)}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 
