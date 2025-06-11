@@ -65,7 +65,7 @@ const AboutUs = () => {
             </div>
             <div>
               <img
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=400&fit=crop&auto=format"
+                src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=500&h=400&fit=crop&auto=format"
                 alt="Seorang laki-laki Indonesia dari suku Dayak dengan pakaian tradisional sedang mengumpulkan tumbuhan obat di hutan"
                 className="rounded-lg shadow-lg w-full"
               />
