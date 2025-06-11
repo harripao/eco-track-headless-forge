@@ -51,8 +51,8 @@ const Hero = () => {
           </div>
           <div className="lg:pl-8">
             <img
-              src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&h=400&fit=crop"
-              alt="Environmental sustainability"
+              src="https://images.unsplash.com/photo-1574263867128-1e0b4c623c14?w=600&h=400&fit=crop"
+              alt="Hutan tropis yang rimbun dan hijau"
               className="rounded-lg shadow-2xl w-full"
             />
           </div>
