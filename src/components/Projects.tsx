@@ -12,38 +12,39 @@ const Projects = () => {
   const { t } = useLanguage();
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // UPDATED PROJECTS DATA dengan konten dan gambar baru
   const projects = [
     {
-      title: t('projects.sumatra.title'),
-      description: t('projects.sumatra.description'),
-      image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=250&fit=crop',
-      category: t('projects.category.forest'),
-      impact: t('projects.sumatra.impact'),
-      status: t('projects.status.ongoing')
+      title: "Restorasi Hutan Mangrove Sentani",
+      description: "Program restorasi ekosistem mangrove di pesisir Danau Sentani untuk melindungi biodiversitas dan mencegah erosi pantai. Melibatkan 150 keluarga nelayan lokal.",
+      image: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=250&fit=crop',
+      category: "Konservasi Alam",
+      impact: "2,500 pohon mangrove",
+      status: "Sedang Berjalan"
     },
     {
-      title: t('projects.agroforestry.title'),
-      description: t('projects.agroforestry.description'),
-      image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=400&h=250&fit=crop',
-      category: t('projects.category.community'),
-      impact: t('projects.agroforestry.impact'),
-      status: t('projects.status.ongoing')
+      title: "Program Agroforestri Kampung Abar",
+      description: "Pengembangan sistem agroforestri berkelanjutan yang menggabungkan budidaya tanaman pangan dengan pelestarian hutan. Meningkatkan pendapatan petani hingga 40%.",
+      image: 'https://images.unsplash.com/photo-1574263867128-a3d5c1b1deae?w=400&h=250&fit=crop',
+      category: "Pemberdayaan Masyarakat",
+      impact: "80 keluarga petani",
+      status: "Fase Perluasan"
     },
     {
-      title: t('projects.carbon.title'),
-      description: t('projects.carbon.description'),
-      image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&h=250&fit=crop',
-      category: t('projects.category.technology'),
-      impact: t('projects.carbon.impact'),
-      status: t('projects.status.beta')
+      title: "Monitoring Karbon Digital Hutan Papua",
+      description: "Implementasi teknologi IoT dan satelit untuk monitoring real-time emisi karbon hutan Papua. Sistem peringatan dini untuk deforestasi.",
+      image: 'https://images.unsplash.com/photo-1596273158045-89a0e0f2ee59?w=400&h=250&fit=crop',
+      category: "Teknologi Hijau",
+      impact: "50,000 hektar dipantau",
+      status: "Pilot Project"
     },
     {
-      title: t('projects.reforestation.title'),
-      description: t('projects.reforestation.description'),
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop',
-      category: t('projects.category.forest'),
-      impact: t('projects.reforestation.impact'),
-      status: t('projects.status.active')
+      title: "Reforestasi Perbukitan Cyclops",
+      description: "Program penanaman kembali hutan di Perbukitan Cyclops dengan spesies endemik Papua. Melibatkan sekolah-sekolah dan komunitas lokal dalam kegiatan penanaman.",
+      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&h=250&fit=crop',
+      category: "Restorasi Hutan",
+      impact: "10,000 bibit ditanam",
+      status: "Tahap 2 Aktif"
     }
   ];
 
@@ -56,10 +57,10 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            {t('projects.title')}
+            Proyek-Proyek Kami
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t('projects.subtitle')}
+            Inisiatif konkret untuk kelestarian lingkungan dan pemberdayaan masyarakat Papua
           </p>
         </div>
 
@@ -73,7 +74,7 @@ const Projects = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute top-4 right-4">
-                  <Badge variant={project.status === t('projects.status.completed') ? 'default' : 'secondary'}>
+                  <Badge variant={project.status === 'Selesai' ? 'default' : 'secondary'}>
                     {project.status}
                   </Badge>
                 </div>
@@ -94,7 +95,7 @@ const Projects = () => {
                   size="sm"
                   onClick={() => handleProjectClick(project)}
                 >
-                  {t('projects.learnMore')}
+                  Pelajari Lebih Lanjut
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>
@@ -104,7 +105,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <Button size="lg" className="bg-green-600 hover:bg-green-700" asChild>
-            <Link to="/projects">{t('projects.viewAll')}</Link>
+            <Link to="/projects">Lihat Semua Proyek</Link>
           </Button>
         </div>
       </div>

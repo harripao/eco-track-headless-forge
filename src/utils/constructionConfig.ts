@@ -3,7 +3,7 @@
 export const constructionConfig = {
   // Set ke true untuk mengaktifkan under construction mode
   news: true,
-  projects: true, // Diubah ke true untuk mematikan section Projects
+  projects: false, // Diubah ke false untuk mengaktifkan section Projects kembali
   resources: false,
   contact: false,
   
