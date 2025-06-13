@@ -3,14 +3,14 @@
 export const constructionConfig = {
   // Set ke true untuk mengaktifkan under construction mode
   news: true,
-  projects: false,
+  projects: true, // Diubah ke true untuk mematikan section Projects
   resources: false,
   contact: false,
   
   // Pesan khusus untuk setiap section
   messages: {
     news: "Section berita dan update sedang dalam tahap pembaruan dengan konten terbaru.",
-    projects: "Section proyek sedang dalam tahap pembaruan.",
+    projects: "Section proyek sedang dalam tahap pembaruan dengan konten dan gambar terbaru.",
     resources: "Section resources sedang dalam tahap pembaruan.",
     contact: "Section kontak sedang dalam tahap pembaruan."
   }
