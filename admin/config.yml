@@ -13,6 +13,8 @@ collections:
     folder: "content"
     create: true
     slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
