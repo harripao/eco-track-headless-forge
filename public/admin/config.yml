@@ -5,6 +5,7 @@ backend:
   auth_scope: repo
   client_id: Ov23lijQSjaIr9oUjHbe
   base_url: https://reliable-sunshine-83aea0.netlify.app
+  auth_endpoint: /prod/auth
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
