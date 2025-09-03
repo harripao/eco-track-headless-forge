@@ -3,6 +3,8 @@ backend:
   repo: harripao/eco-track-headless-forge
   branch: main
   auth_scope: repo
+  client_id: Ov23lijQSjaIr9oUjHbe
+  base_url: https://your-auth-server.com
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
