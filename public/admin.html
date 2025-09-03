@@ -10,7 +10,9 @@
   <body>
     <div id="cms"></div>
     <script>
-      CMS.init({ config: '/admin/config.yml' });
+    window.onload = function () {
+    CMS.init({ config: '/admin/config.json' });
+    };
     </script>
     <h1>Memuat CMS...</h1>
   </body>
