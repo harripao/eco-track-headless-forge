@@ -4,7 +4,7 @@ backend:
   branch: main
   auth_scope: repo
 
-media_folder: "/assets/images"
+media_folder: "assets/images"
 public_folder: "/assets/images"
 
 collections:
