@@ -2,18 +2,26 @@ backend:
   name: github
   repo: harripao/eco-track-headless-forge
   branch: main
+  auth_scope: repo
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
+media_library:
+  name: local
+
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "content"
+  - name: pages
+    label: Pages
+    folder: content
     create: true
     slug: "{{slug}}"
     identifier_field: title
     summary: "{{title}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
