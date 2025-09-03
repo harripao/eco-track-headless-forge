@@ -3,8 +3,8 @@ backend:
   repo: harripao/eco-track-headless-forge
   branch: main
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
   - name: "pages"
