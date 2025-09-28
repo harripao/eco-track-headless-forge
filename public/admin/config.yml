@@ -2,8 +2,7 @@ backend:
   name: github
   repo: harripao/eco-track-headless-forge
   branch: main
-  auth_scope: repo
-
+  
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
