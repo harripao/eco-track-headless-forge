@@ -2,9 +2,13 @@ backend:
   name: github
   repo: harripao/eco-track-headless-forge
   branch: main
-  
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+  commit_messages:
+    create: "Create {{collection}}: {{slug}}"
+    update: "Update {{collection}}: {{slug}}"
+    delete: "Delete {{collection}}: {{slug}}"
+
+media_folder: "assets"
+public_folder: "/assets"
 
 media_library:
   name: local
@@ -24,3 +28,6 @@ collections:
       - label: Body
         name: body
         widget: markdown
+editor:
+  preview: false
+publish_mode: editorial_workflow
