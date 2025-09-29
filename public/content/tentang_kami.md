@@ -1,7 +1,5 @@
----
 title: Tentang Kami
 description: Sentani.org adalah platform digital untuk pelestarian hutan dan penguatan komunitas lokal.
----
 
 ## Visi
 

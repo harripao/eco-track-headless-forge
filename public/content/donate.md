@@ -1,7 +1,5 @@
----
 title: Donasi
 description: Dukung pelestarian hutan dan komunitas lokal melalui kontribusi Anda.
----
 
 ## Cara Berdonasi
 

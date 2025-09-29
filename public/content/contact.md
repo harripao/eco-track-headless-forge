@@ -5,6 +5,6 @@ description: Hubungi tim Sentani untuk kolaborasi, dukungan, atau pertanyaan umu
 
 ## Hubungi Kami
 
-📧 Email: info@sentani.org  
-📍 Alamat: Jl. Hutan Lestari No. 88, Sentani, Papua  
-📞 Telepon: +62 812-3456-7890
+📧 Email: admin@sentani.org  
+📍 Alamat: Jl. Caman Raya No. 99, Bekasi, Jawa Barat
+📞 Telepon: +62 812-8590-5342
