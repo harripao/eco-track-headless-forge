@@ -26,6 +26,7 @@ function App() {
           <Route path="/news/:id" element={<NewsPage />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/ui-test" element={<UITest />} />
+          <Route path="/cms-access" element={<CMSAccess />} />
         </Routes>
       </Router>
       <Toaster />
