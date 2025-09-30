@@ -11,6 +11,7 @@ import Demo from './pages/Demo';
 import AllProjects from './pages/AllProjects';
 import Donate from './pages/Donate';
 import NewsPage from './pages/NewsPage';
+import UITest from './pages/UITest'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/donate" element={<Donate />} />
           <Route path="/news/:id" element={<NewsPage />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/ui-test" element={<UITest />} />
         </Routes>
       </Router>
       <Toaster />
