@@ -151,6 +151,11 @@ const Footer = () => {
             </Button>
           </div>
         </div>
+        <div className="mt-4">
+          <a href="/admin/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-green-600">
+            🔐 Login CMS
+          </a>
+        </div>
       </div>
     </footer>
   );
