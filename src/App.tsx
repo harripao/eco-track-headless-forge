@@ -12,6 +12,7 @@ import AllProjects from './pages/AllProjects';
 import Donate from './pages/Donate';
 import NewsPage from './pages/NewsPage';
 import UITest from './pages/UITest'
+import CMSAccess from '@/pages/CMSAccess'
 
 function App() {
   return (
