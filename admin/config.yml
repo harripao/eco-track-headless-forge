@@ -21,7 +21,7 @@ collections:
     folder: "src/content/news"
     create: true
     slug: "{{slug}}"
-    summary: "{{title}}"
+    summary: "{{title}} - {{date}}"
     fields:
       - { label: "Judul", name: "title", widget: "string" }
       - { label: "Tanggal", name: "date", widget: "datetime" }
@@ -70,7 +70,7 @@ collections:
     folder: "src/content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}}"
+    summary: "{{title}} - {{date}}"
     fields:
       - { label: "Judul", name: "title", widget: "string" }
       - { label: "Tanggal", name: "date", widget: "datetime" }
