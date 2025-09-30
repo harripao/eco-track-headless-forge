@@ -1,0 +1,77 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+    
+  - name: "news"
+    label: "Berita"
+    folder: "src/content/news"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal", name: "date", widget: "datetime" }
+      - { label: "Isi", name: "body", widget: "markdown" }
+    preview_path: "news/{{slug}}"
+
+  - name: "projects"
+    label: "Proyek"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "Nama Proyek", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
+      - { label: "Status", name: "status", widget: "select", options: ["Aktif", "Selesai", "Dalam Perencanaan"] }
+    preview_path: "projects/{{slug}}"
+
+  - name: "donate"
+    label: "Donasi"
+    folder: "src/content/donate"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
+      - { label: "Link Donasi", name: "donation_url", widget: "string" }
+    preview_path: "donate/{{slug}}"
+
+  - name: "resources"
+    label: "Sumber Daya"
+    folder: "src/content/resources"
+    summary: "{{title}}"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Kategori", name: "category", widget: "select", options: ["Panduan", "Data", "Formulir", "Lainnya"] }
+      - { label: "File atau Link", name: "resource_url", widget: "string" }
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
+    preview_path: "resources/{{slug}}"
+
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Tanggal", name: "date", widget: "datetime" }
+      - { label: "Isi", name: "body", widget: "markdown" }
