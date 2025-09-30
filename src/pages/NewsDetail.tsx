@@ -1,7 +1,3 @@
-Mantap bro Harri! Kita langsung bikin:
-
-🧩 1. Komponen Dummy: NewsDetail.tsx
-Letakkan di src/pages/NewsDetail.tsx
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -21,15 +17,3 @@ const NewsDetail = () => {
 
 export default NewsDetail
 
-
-📌 Ini akan tampil saat kamu akses /news/contoh-berita
-
-📄 2. File Markdown Dummy
-Letakkan di content/news/contoh-berita.md
----
-title: "Contoh Berita"
-date: "2025-09-30"
-slug: "contoh-berita"
----
-
-Ini adalah isi berita dummy untuk preview CMS. Tim konten bisa edit langsung dari Decap CMS.
